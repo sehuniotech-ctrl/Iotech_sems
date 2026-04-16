@@ -1,0 +1,70 @@
+		Request 값																																																																																																																													
+																																																																																																																															
+	SNRM	7E	A0	08	02	FF	22	93	A1	7D	7E																																																																																																																				
+																																																																																																																															
+	AARQ	7E	A0	45	02	FF	22	10	64	76	E6	E6	00	60	36	A1	09	06	07	60	85	74	05	08	01	01	8A	02	07	80	8B	07	60	85	74	05	08	02	01	AC	0A	80	08	31	41	32	42	33	43	34	44	BE	10	04	0E	01	00	00	00	06	5F	1F	04	00	00	18	1D	FF	FF	44	E6	7E																																																							
+																																																																																																																															
+	검침 일자 현월	7E	A0	1A	02	FF	22	32	DA	6D	E6	E6	00	C0	01	81	00	01	01	00	00	01	02	FF	02	00	F4	52	7E																																																																																																		
+																																																																																																																															
+	전력량	7E	A0	1A	02	FF	22	54	EA	6F	E6	E6	00	C0	01	81	00	07	00	00	62	01	01	FF	02	00	45	DD	7E																																																																																																		
+																																																																																																																															
+	순시값	7E	A0	1A	02	FF	22	76	BA	61	E6	E6	00	C0	01	81	00	07	01	01	62	80	00	FF	02	00	BE	5E	7E																																																																																																		
+																																																																																																																															
+	자계,커버,배터리	7E	A0	1A	02	FF	22	98	FA	69	E6	E6	00	C0	01	81	00	01	00	00	61	61	00	FF	02	00	14	C8	7E																																																																																																		
+																																																																																																																															
+	커스터머 ID	7E	A0	1A	02	FF	22	BA	CA	6F	E6	E6	00	C0	01	81	00	01	01	00	00	00	00	FF	02	00	C6	60	7E																																																																																																		
+																																																																																																																															
+	제조사 ID	7E	A0	1A	02	FF	22	DC	BA	61	E6	E6	00	C0	01	81	00	01	01	00	00	00	01	FF	02	00	7D	7C	7E																																																																																																		
+																																																																																																																															
+	Disconnect	7E	A0	08	02	FF	22	53	AD	BB	7E																																																																																																																				
+																																																																																																																															
+		Response 값																																																																																																																													
+																																																																																																																															
+	SNRM	7E 	A0	1F	23	02	3B	73	C1	A5	81	80	12	05	01	6C	06	01	80	07	04	00	00	00	01	08	04	00	00	00	01	E3	BA	7E																																																																																													
+																																																																																																																															
+																																																																																																																															
+	AARQ	7E	A0	38	23	02	3B	30	13	85	E6	E7	00	61	29	A1	09	06	07	60	85	74	05	08	01	01	A2	03	02	01	00	A3	05	A1	03	02	01	00	BE	10	04	0E	08	00	06	5F	1F	04	00	00	18	1D	3A	B3	00	07	8C	39	7E																																																																				
+																																																																																																																															
+																													deviation																																																																																																		
+	검침 일자 현월	7E	A0	1F	23	02	3B	52	7E	D1	E6	E7	00	C4	01	81	00	09	0C	07	DE	03	0B	02	0B	1A	15	FF	FD	E4	1C	75	48	7E																																																																																													
+																			/len	년		월	일	요일	시	분	초	1/100초			상태																																																																																																
+																																																																																																																															
+																											double long unsigned										double long unsigned															double long unsigned										double long unsigned															double long unsigned										double long unsigned															double long unsigned										double long unsigned										double long unsigned					
+														//Get response normal								double long unsigned										double long unsigned										float32					double long unsigned										double long unsigned										float32					double long unsigned										double long unsigned										float32					double long unsigned										double long unsigned										float32										
+	전력량	7E	A8	7C	23	02	3B	74	45	88	E6	E7	00	C4	01	81	00	01	01	02	19	06	00	01	A8	C2	06	00	01	EB	CA	06	00	00	02	60	06	00	00	A1	49	17	3F	80	00	00	06	00	00	7E	90	06	00	00	90	8E	06	00	00	02	60	06	00	00	2B	52	17	3F	80	00	00	06	00	00	62	DA	06	00	00	72	B4	06	00	00	00	00	06	00	00	27	96	17	3F	80	00	00	06	00	00	60	B9	06	00	00	71	68	06	00	00	00	00	06	00	00	27	9C	17	3F	80	00	00	06	00	00	63	7D	7E
+																		array					//순방향 유효전력량 전체시간대																																																		//순방향 유효전력량 B시간대																																																		// 순방향 유효전력량 D시간대				
+																			array count									//순방향 피상전력량 전체시간대																																																		//순방향 피상전력량 B시간대																																																	
+																				structure													//순방향 지상무효전력량 전체시간대																																																		//순방향 지상무효전력량 B시간대																																												
+																					structure count																	//순방향 진상무효전력량 전체시간대																																																		//순방향 진상무효전력량 B시간대																																							
+																																											//역률																																																		//역률																																		
+																																																//순방향 유효전력량 A시간대																																																		// 순방향 유효전력량 C시간대																													
+																																																					//순방향 피상전력량 A시간대																																																		//순방향 피상전력량 C시간대																								
+																																																										//순방향 지상무효전력량 A시간대																																																		//순방향 지상무효전력량 C시간대																			
+																																																															//순방향 진상무효전력량 A시간대																																																		//순방향 진상무효전력량 C시간대														
+																																																																				//역률																																																		//역률									
+																																																																																																																															
+																						float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32					float32																				
+	순시값	7E	A0	6F	23	02	3B	96	ED	C8	E6	E7	00	C4	01	81	00	01	01	02	12	17	40	89	36	34	17	43	55	C9	27	17	40	45	CE	62	17	42	9A	45	18	17	43	A0	3C	D5	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	00	00	00	00	17	41	D8	00	00	55	9E	7E													
+																		array					//A상순시전류 IEC62056-62 P17-18참조																									//B상순시전류 IEC62056-62 P17-18참조																									//C상순시전류 IEC62056-62 P17-18참조																									전압 A상-전압 B상 위상각										현재온도																			
+																			array count									//A상순시전압					//A상순시전압THD					//A상순시역률					//A상전압전류위상값										//B상순시전압					//B상순시전압THD					//B상순시역률					//B상전압전류위상값										//C상순시전압					//C상순시전압THD					//C상순시역률					//C상전압전류위상값										전압 A상-전압 C상 위상각																								
+																				structure																																																																																																											
+																					structure count																																																																																																										
+																		bit-string																																																																																																													
+																			length																																																																																																												
+																																																																																																																															
+	자계,커버,배터리	7E	A0	14	23	02	3B	B8	B2	92	E6	E7	00	C4	01	81	00	04	08	05	00	BA	7E				MSB	6	5	4	3	2	1	LSB																																																																																													
+																				//data											자계	커버		배터																																																																																													
+																															감지	오픈		리없																																																																																													
+																		octet-string																음																																																																																													
+																			length																																																																																																												
+																																																																																																																															
+	커스터머 ID	7E	A0	1A	23	02	69	DA	19	5B	E6	E7	00	C4	01	81	00	09	07	30	30	30	30	30	33	36	08	6E	7E																																																																																																		
+																				0	0	0	0	0	3	6																																																																																																					
+																																																																																																																															
+																		octet-string																																																																																																													
+																			length																																																																																																												
+																																																																																																																															
+	제조사 ID	7E	A0	1A	23	02	69	FC	2D	1F	E6	E7	00	C4	01	81	00	09	07	30	30	30	33	36	32	35	5F	B6	7E																																																																																																		
+																							//제조사		//계량기Type																																																																																																						
+																																																																																																																															
+	DISCONNECT	7E	A0	08	23	02	3B	73	5D	21	7E																																																																																																																				

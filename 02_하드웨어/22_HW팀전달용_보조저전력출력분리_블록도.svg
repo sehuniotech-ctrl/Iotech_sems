@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 32px 'Malgun Gothic', sans-serif; fill: #1f2937; }
+      .label { font: 700 20px 'Malgun Gothic', sans-serif; fill: #1f2937; }
+      .text { font: 16px 'Malgun Gothic', sans-serif; fill: #374151; }
+      .small { font: 14px 'Malgun Gothic', sans-serif; fill: #4b5563; }
+      .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2.5; rx: 16; ry: 16; }
+      .boxBlue { fill: #eaf2ff; stroke: #2457a6; stroke-width: 2.5; rx: 16; ry: 16; }
+      .boxGreen { fill: #ebfbef; stroke: #1b7a43; stroke-width: 2.5; rx: 16; ry: 16; }
+      .boxOrange { fill: #fff4e8; stroke: #c96d1a; stroke-width: 2.5; rx: 16; ry: 16; }
+      .line { stroke: #111827; stroke-width: 4; fill: none; }
+      .lineBlue { stroke: #2457a6; stroke-width: 3.5; fill: none; }
+      .lineGreen { stroke: #1b7a43; stroke-width: 3.5; fill: none; }
+      .lineOrange { stroke: #c96d1a; stroke-width: 3.5; fill: none; }
+    </style>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#111827"/>
+    </marker>
+    <marker id="aub" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#2457a6"/>
+    </marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#1b7a43"/>
+    </marker>
+    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#c96d1a"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="820"/>
+  <text class="title" x="50" y="58">HW팀 전달용 보조 저전력 출력 분리 블록도</text>
+
+  <rect class="box" x="60" y="180" width="150" height="90"/>
+  <text class="label" x="102" y="233">AC 입력</text>
+
+  <rect class="boxOrange" x="280" y="165" width="180" height="120"/>
+  <text class="label" x="325" y="220">입력 보호부</text>
+  <text class="small" x="324" y="248">Fuse / MOV / EMI</text>
+
+  <rect class="boxOrange" x="550" y="165" width="180" height="120"/>
+  <text class="label" x="598" y="220">메인 릴레이</text>
+  <text class="small" x="575" y="248">부하 차단 제어</text>
+
+  <rect class="boxBlue" x="820" y="165" width="200" height="120"/>
+  <text class="label" x="865" y="220">ATM90E26-YU</text>
+  <text class="small" x="862" y="248">계량칩</text>
+
+  <rect class="box" x="1110" y="165" width="190" height="120"/>
+  <text class="label" x="1185" y="220">부하</text>
+  <text class="small" x="1148" y="248">출력 단자</text>
+
+  <path class="line" marker-end="url(#ab)" d="M210 225 L280 225"/>
+  <path class="line" marker-end="url(#ab)" d="M460 225 L550 225"/>
+  <path class="line" marker-end="url(#ab)" d="M730 225 L820 225"/>
+  <path class="line" marker-end="url(#ab)" d="M1020 225 L1110 225"/>
+
+  <rect class="boxGreen" x="180" y="490" width="220" height="110"/>
+  <text class="label" x="232" y="545">보조 전원부</text>
+  <text class="small" x="214" y="572">MCU / 통신 / 입력 유지</text>
+
+  <rect class="boxBlue" x="520" y="475" width="220" height="140"/>
+  <text class="label" x="595" y="530">Main MCU</text>
+  <text class="small" x="566" y="558">Smart Load 제어</text>
+  <text class="small" x="548" y="582">대기전력 차단 / 복구 판단</text>
+
+  <rect class="boxBlue" x="860" y="490" width="220" height="110"/>
+  <text class="label" x="915" y="545">RS-485 / DCU</text>
+  <text class="small" x="930" y="572">통신 유지</text>
+
+  <rect class="boxGreen" x="1180" y="475" width="170" height="140"/>
+  <text class="label" x="1220" y="530">Wake-up</text>
+  <text class="small" x="1212" y="558">RTU / 버튼</text>
+  <text class="small" x="1210" y="582">외부 입력</text>
+
+  <path class="lineGreen" marker-end="url(#ag)" d="M290 490 L290 440 L630 440 L630 475"/>
+  <path class="lineGreen" marker-end="url(#ag)" d="M290 490 L290 440 L970 440 L970 490"/>
+  <path class="lineGreen" marker-end="url(#ag)" d="M290 490 L290 440 L1265 440 L1265 475"/>
+
+  <path class="lineBlue" marker-end="url(#aub)" d="M920 285 L920 420 L740 420 L740 545"/>
+  <path class="lineOrange" marker-end="url(#ao)" d="M630 475 L630 320"/>
+  <path class="lineBlue" marker-end="url(#aub)" d="M740 545 L860 545"/>
+  <path class="lineBlue" marker-end="url(#aub)" d="M1180 545 L740 545"/>
+
+  <rect class="box" x="60" y="680" width="1290" height="80"/>
+  <text class="text" x="90" y="715">개념: 메인 부하는 릴레이로 완전 차단하고, 보조 전원으로 MCU/통신/복구 입력만 유지</text>
+  <text class="text" x="90" y="742">복구는 서버, RTU, 스케줄, 외부 wake-up 입력 중 하나로 수행</text>
+</svg>
