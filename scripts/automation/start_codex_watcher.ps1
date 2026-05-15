@@ -44,10 +44,11 @@ if ($AllowDangerousBypass) {
 
 $OutLog = Join-Path $LogDir "watcher.out.log"
 $ErrLog = Join-Path $LogDir "watcher.err.log"
+$ArgumentString = ($ArgsList | ForEach-Object { '"' + ($_ -replace '"', '\"') + '"' }) -join " "
 
 Start-Process `
     -FilePath "python" `
-    -ArgumentList $ArgsList `
+    -ArgumentList $ArgumentString `
     -WorkingDirectory $RepoRoot `
     -WindowStyle Hidden `
     -RedirectStandardOutput $OutLog `
