@@ -26,6 +26,7 @@ Use GitHub as the shared event hub between:
 - `docs/automation/review-rubric.md`
 - `docs/automation/codex-action-template.md`
 - `docs/automation/codex-watcher-contract.md`
+- `docs/automation/codex-thread-link.json`
 - `docs/automation/setup-checklist.md`
 - `scripts/automation/build_review_bundle.py`
 - `scripts/automation/run_gemini_review.py`

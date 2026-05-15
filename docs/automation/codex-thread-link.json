@@ -1,0 +1,21 @@
+{
+  "target_thread_id": "019dd240-2788-7e12-8b6e-220dac6f23c7",
+  "workspace": "D:\\work\\15_지선차단기",
+  "repository": "sehuniotech-ctrl/Iotech_sems",
+  "scope": {
+    "mode": "full_project",
+    "description": "Watch and handle follow-up work for the entire 15_지선차단기 project folder."
+  },
+  "github_signals": {
+    "pull_request_label": "needs-codex",
+    "clean_label": "review-clean",
+    "blocked_label": "review-blocked",
+    "queue_issue_title_pattern": "[Codex Queue] PR #<number> follow-up",
+    "review_comment_header": "# Gemini Review"
+  },
+  "expected_behavior": {
+    "on_needs_codex": "Wake or resume the target Codex thread and ask it to apply the latest Gemini action request.",
+    "on_review_clean": "Stop follow-up work for that PR.",
+    "on_review_blocked": "Do not run schematic edits; surface the blocker first."
+  }
+}

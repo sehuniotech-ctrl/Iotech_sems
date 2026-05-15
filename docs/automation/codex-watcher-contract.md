@@ -6,6 +6,20 @@ This document defines the minimum behavior for any external Codex watcher.
 
 GitHub Actions can run the Gemini side inside the repository, but they cannot directly wake a Codex chat thread by themselves.
 
+## Target thread
+
+The intended Codex thread for this project is:
+
+`019dd240-2788-7e12-8b6e-220dac6f23c7`
+
+The intended workspace scope is the full project folder:
+
+`D:\work\15_지선차단기`
+
+The machine-readable mapping is stored in:
+
+`docs/automation/codex-thread-link.json`
+
 A Codex watcher can be:
 
 - a local script on your machine
@@ -29,11 +43,12 @@ Trigger Codex when one of the following appears:
 
 ## What the watcher should do
 
-1. Open the PR context
-2. Read the latest Gemini action request
-3. Apply only the requested follow-up changes
-4. Push a new commit to the same branch
-5. Optionally add a short reply comment summarizing what was changed
+1. Resume or wake thread `019dd240-2788-7e12-8b6e-220dac6f23c7`.
+2. Open the PR context.
+3. Read the latest Gemini action request.
+4. Apply only the requested follow-up changes.
+5. Push a new commit to the same branch.
+6. Optionally add a short reply comment summarizing what was changed.
 
 ## Safety rules
 
