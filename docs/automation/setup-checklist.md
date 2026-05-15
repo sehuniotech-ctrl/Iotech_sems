@@ -15,6 +15,7 @@ Complete this once in GitHub before relying on the loop.
 ## Optional repository variables
 
 - `GEMINI_MODEL`: defaults to `gemini-2.5-flash`
+- `GEMINI_REVIEW_MAX_ATTEMPTS`: defaults to `4` for retrying temporary Gemini API errors
 
 ## Recommended labels
 
