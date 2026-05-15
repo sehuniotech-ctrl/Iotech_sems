@@ -54,6 +54,13 @@ jobs:
             --repo "${{ github.repository }}" \
             --body-file .tmp/automation/gemini_review.md
 
+      - name: Ensure labels exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "needs-codex" --repo "${{ github.repository }}" --color "d73a4a" --description "Codex follow-up required" || true
+          gh label create "review-clean" --repo "${{ github.repository }}" --color "0e8a16" --description "Gemini review found no blocking follow-up" || true
+
       - name: Update labels from Gemini status
         env:
           GH_TOKEN: ${{ github.token }}
