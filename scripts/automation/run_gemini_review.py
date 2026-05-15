@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -67,7 +66,27 @@ def main() -> int:
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise RuntimeError("GEMINI_API_KEY is required")
+        blocked = """# Gemini Review
+STATUS: REVIEW_BLOCKED
+
+## Summary
+- Gemini review could not run because `GEMINI_API_KEY` was not available to the workflow.
+
+## Findings
+- Severity: blocking. File: repository settings. Reason: add or verify the Actions secret named `GEMINI_API_KEY`.
+
+## Codex Action Request
+- Branch:
+- Files:
+- Required changes: none until the secret is available
+- Constraints:
+- Done when: rerun the workflow after adding `GEMINI_API_KEY`
+
+## Confidence
+- High
+"""
+        Path(args.output).write_text(blocked, encoding="utf-8")
+        return 0
 
     model = os.environ.get("GEMINI_MODEL") or "gemini-2.5-pro"
     prompt = Path(args.bundle).read_text(encoding="utf-8")
@@ -76,7 +95,54 @@ def main() -> int:
         review = call_gemini(api_key, model, prompt)
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Gemini API error: {exc.code} {body}") from exc
+        blocked = f"""# Gemini Review
+STATUS: REVIEW_BLOCKED
+
+## Summary
+- Gemini API returned an HTTP error before review could complete.
+
+## Findings
+- Severity: blocking. File: GitHub Actions secret or variable. Reason: Gemini API error `{exc.code}` using model `{model}`.
+
+## Codex Action Request
+- Branch:
+- Files:
+- Required changes: verify `GEMINI_API_KEY` and optional `GEMINI_MODEL`
+- Constraints:
+- Done when: rerun the workflow and Gemini returns `NEEDS_CODEX` or `REVIEW_CLEAN`
+
+## Details
+```text
+{body[:2000]}
+```
+
+## Confidence
+- High
+"""
+        Path(args.output).write_text(blocked, encoding="utf-8")
+        return 0
+    except Exception as exc:
+        blocked = f"""# Gemini Review
+STATUS: REVIEW_BLOCKED
+
+## Summary
+- Gemini review runner failed before review could complete.
+
+## Findings
+- Severity: blocking. File: `scripts/automation/run_gemini_review.py`. Reason: `{type(exc).__name__}: {exc}`.
+
+## Codex Action Request
+- Branch:
+- Files:
+- Required changes: inspect the workflow error and rerun after fixing it
+- Constraints:
+- Done when: Gemini returns `NEEDS_CODEX` or `REVIEW_CLEAN`
+
+## Confidence
+- Medium
+"""
+        Path(args.output).write_text(blocked, encoding="utf-8")
+        return 0
 
     Path(args.output).write_text(normalize_review(review), encoding="utf-8")
     return 0

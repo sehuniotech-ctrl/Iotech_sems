@@ -60,6 +60,7 @@ jobs:
         run: |
           gh label create "needs-codex" --repo "${{ github.repository }}" --color "d73a4a" --description "Codex follow-up required" || true
           gh label create "review-clean" --repo "${{ github.repository }}" --color "0e8a16" --description "Gemini review found no blocking follow-up" || true
+          gh label create "review-blocked" --repo "${{ github.repository }}" --color "fbca04" --description "Gemini review could not complete" || true
 
       - name: Update labels from Gemini status
         env:
@@ -81,6 +82,22 @@ jobs:
             gh pr edit "${{ github.event.pull_request.number }}" \
               --repo "${{ github.repository }}" \
               --remove-label "needs-codex" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-blocked" || true
+          fi
+
+          if grep -q "STATUS: REVIEW_BLOCKED" .tmp/automation/gemini_review.md; then
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --add-label "review-blocked"
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "needs-codex" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-clean" || true
+          fi
 
       - name: Sync Codex queue issue
         env:
@@ -91,4 +108,9 @@ jobs:
             --pr "${{ github.event.pull_request.number }}" \
             --branch "${{ github.event.pull_request.head.ref }}" \
             --review-file .tmp/automation/gemini_review.md
+
+      - name: Fail when review is blocked
+        run: |
+          if grep -q "STATUS: REVIEW_BLOCKED" .tmp/automation/gemini_review.md; then
+            exit 1
           fi
