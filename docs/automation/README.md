@@ -26,11 +26,13 @@ Use GitHub as the shared event hub between:
 - `docs/automation/review-rubric.md`
 - `docs/automation/codex-action-template.md`
 - `docs/automation/codex-watcher-contract.md`
-- `docs/automation/codex-thread-link.json`
+- `docs/automation/codex-thread-link.example.json`
 - `docs/automation/setup-checklist.md`
 - `scripts/automation/build_review_bundle.py`
 - `scripts/automation/run_gemini_review.py`
 - `scripts/automation/sync_codex_queue_issue.py`
+- `scripts/automation/watch_codex_queue.py`
+- `scripts/automation/start_codex_watcher.ps1`
 - `.github/workflows/gemini-review.yml`
 
 ## Shared conventions
@@ -60,10 +62,11 @@ Codex should treat the latest PR comment that starts with `# Gemini Review` as t
 - Add `needs-codex` when further edits are required
 - Add `review-clean` when Gemini reports no blocking feedback
 - Create or update a GitHub issue that acts as the Codex follow-up queue
+- Optionally run a local watcher that resumes the configured Codex thread when `needs-codex` appears
 
 ## What still needs external wiring
 
-This repo can fully automate the GitHub side, but Codex thread wakeup is not natively available from this repository alone.
+This repo can fully automate the GitHub side. Codex thread wakeup requires the local watcher to be running on a machine with Codex CLI installed.
 
 You still need one of these:
 
@@ -76,6 +79,23 @@ If you later add a Codex watcher, it should monitor:
 - PR label `needs-codex`
 - New PR comment whose header is `# Gemini Review`
 - Updated issue body matching `Codex Action Request`
+
+## Start the local watcher
+
+Run from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/automation/start_codex_watcher.ps1
+```
+
+The watcher reads `docs/automation/codex-thread-link.example.json`, then resolves the local target from environment variables.
+
+Defaults are set by `scripts/automation/start_codex_watcher.ps1` for this workspace:
+
+- `CODEX_WATCHER_THREAD_ID=019dd240-2788-7e12-8b6e-220dac6f23c7`
+- `CODEX_WATCHER_WORKSPACE=D:\work\15_지선차단기`
+
+Override those environment variables if another machine or thread should take over.
 
 ## Gemini model
 

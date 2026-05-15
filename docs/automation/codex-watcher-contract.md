@@ -16,15 +16,30 @@ The intended workspace scope is the full project folder:
 
 `D:\work\15_지선차단기`
 
-The machine-readable mapping is stored in:
+The portable machine-readable mapping template is stored in:
 
-`docs/automation/codex-thread-link.json`
+`docs/automation/codex-thread-link.example.json`
+
+The actual local watcher reads:
+
+- `CODEX_WATCHER_THREAD_ID`
+- `CODEX_WATCHER_WORKSPACE`
+
+For this workstation, `scripts/automation/start_codex_watcher.ps1` sets those defaults to the target thread and project folder above.
 
 A Codex watcher can be:
 
 - a local script on your machine
 - a scheduled worker
 - a future Codex automation that monitors GitHub
+
+This repository includes a local watcher:
+
+`scripts/automation/watch_codex_queue.py`
+
+Start it with:
+
+`scripts/automation/start_codex_watcher.ps1`
 
 ## Watch conditions
 
