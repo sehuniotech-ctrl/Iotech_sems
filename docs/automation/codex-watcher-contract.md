@@ -71,6 +71,7 @@ Trigger Codex when one of the following appears:
 - Never revert unrelated files
 - Stay within the files listed by the latest action request unless the fix clearly requires a linked file
 - If Gemini feedback is ambiguous, prefer a narrow fix and explain assumptions in the commit or PR comment
+- Do not enable `--allow-dangerous-bypass` by default. For schematic and hardware work, normal Codex approval and sandbox behavior is the safer baseline.
 
 ## Completion rule
 

@@ -98,10 +98,18 @@ Defaults are set by `scripts/automation/start_codex_watcher.ps1` for this worksp
 
 Override those environment variables if another machine or thread should take over.
 
+By default, the watcher does not pass Codex the dangerous bypass flag. This is intentional for schematic work: hardware changes should stay inside Codex's normal approval and sandbox behavior unless a trusted operator explicitly opts into bypass mode.
+
 You can also pass a token when starting the watcher:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/automation/start_codex_watcher.ps1 -GitHubToken "<token>"
+```
+
+Dangerous bypass is available but not recommended as a default:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/automation/start_codex_watcher.ps1 -AllowDangerousBypass
 ```
 
 ## Gemini model

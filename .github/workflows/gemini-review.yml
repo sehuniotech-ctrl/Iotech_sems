@@ -74,6 +74,9 @@ jobs:
             gh pr edit "${{ github.event.pull_request.number }}" \
               --repo "${{ github.repository }}" \
               --remove-label "review-clean" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-blocked" || true
           fi
 
           if grep -q "STATUS: REVIEW_CLEAN" .tmp/automation/gemini_review.md; then

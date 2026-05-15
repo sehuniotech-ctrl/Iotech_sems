@@ -109,7 +109,7 @@ def build_prompt(config: LinkConfig, pr: dict, comment: dict) -> str:
 """
 
 
-def run_codex(config: LinkConfig, prompt: str, log_dir: Path) -> int:
+def run_codex(config: LinkConfig, prompt: str, log_dir: Path, allow_dangerous_bypass: bool) -> int:
     log_dir.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d_%H%M%S")
     output_path = log_dir / f"codex_resume_{stamp}.md"
@@ -119,13 +119,14 @@ def run_codex(config: LinkConfig, prompt: str, log_dir: Path) -> int:
         "exec",
         "-C",
         config.workspace,
-        "--dangerously-bypass-approvals-and-sandbox",
         "-o",
         str(output_path),
         "resume",
         config.thread_id,
         "-",
     ]
+    if allow_dangerous_bypass:
+        cmd.insert(4, "--dangerously-bypass-approvals-and-sandbox")
     completed = subprocess.run(
         cmd,
         input=prompt,
@@ -143,7 +144,14 @@ def run_codex(config: LinkConfig, prompt: str, log_dir: Path) -> int:
     return completed.returncode
 
 
-def scan_once(config: LinkConfig, state: dict, token: str | None, log_dir: Path, dry_run: bool) -> bool:
+def scan_once(
+    config: LinkConfig,
+    state: dict,
+    token: str | None,
+    log_dir: Path,
+    dry_run: bool,
+    allow_dangerous_bypass: bool,
+) -> bool:
     repo = config.repository
     pulls = api_get(f"https://api.github.com/repos/{repo}/pulls?state=open&per_page=50", token)
     changed = False
@@ -176,7 +184,7 @@ def scan_once(config: LinkConfig, state: dict, token: str | None, log_dir: Path,
             print(f"[dry-run] would wake Codex for PR #{pr['number']}")
         else:
             print(f"[watcher] waking Codex for PR #{pr['number']}")
-            rc = run_codex(config, prompt, log_dir)
+            rc = run_codex(config, prompt, log_dir, allow_dangerous_bypass)
             if rc != 0:
                 print(f"[watcher] codex exited with {rc}; will retry next scan")
                 continue
@@ -195,6 +203,7 @@ def main() -> int:
     parser.add_argument("--interval", type=int, default=60)
     parser.add_argument("--once", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--allow-dangerous-bypass", action="store_true")
     parser.add_argument("--token-env", default="GITHUB_TOKEN")
     args = parser.parse_args()
 
@@ -207,7 +216,14 @@ def main() -> int:
 
     while True:
         try:
-            if scan_once(config, state, token, Path(args.log_dir), args.dry_run):
+            if scan_once(
+                config,
+                state,
+                token,
+                Path(args.log_dir),
+                args.dry_run,
+                args.allow_dangerous_bypass,
+            ):
                 save_state(state_path, state)
         except urllib.error.HTTPError as exc:
             print(f"[watcher] GitHub API error {exc.code}: {exc.reason}")

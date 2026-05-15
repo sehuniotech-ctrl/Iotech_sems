@@ -1,6 +1,7 @@
 param(
     [int]$IntervalSeconds = 60,
     [string]$GitHubToken,
+    [switch]$AllowDangerousBypass,
     [switch]$DryRun
 )
 
@@ -34,6 +35,11 @@ $ArgsList = @(
 
 if ($DryRun) {
     $ArgsList += "--dry-run"
+}
+
+if ($AllowDangerousBypass) {
+    Write-Warning "AllowDangerousBypass enables Codex to run without sandbox/approval prompts. Use only on trusted branches."
+    $ArgsList += "--allow-dangerous-bypass"
 }
 
 $OutLog = Join-Path $LogDir "watcher.out.log"

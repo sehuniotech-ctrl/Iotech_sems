@@ -11,6 +11,7 @@ Complete this once in GitHub before relying on the loop.
 - `GITHUB_TOKEN`: GitHub token for authenticated local polling. Public repositories may work without it, but setting it avoids low anonymous API limits and is required for private repositories.
 - `CODEX_WATCHER_THREAD_ID`: target Codex thread id. The starter script defaults this to `019dd240-2788-7e12-8b6e-220dac6f23c7`.
 - `CODEX_WATCHER_WORKSPACE`: local project folder. The starter script defaults this to the repository root.
+- `AllowDangerousBypass`: optional PowerShell switch for the starter script. Leave it off by default for schematic and hardware work.
 
 ## Optional repository variables
 
