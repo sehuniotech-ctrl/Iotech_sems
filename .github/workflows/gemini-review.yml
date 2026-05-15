@@ -1,0 +1,120 @@
+name: Gemini PR Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  review:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build review bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .tmp/automation
+          python scripts/automation/build_review_bundle.py \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --event-path "${{ github.event_path }}" \
+            --rubric "docs/automation/review-rubric.md" \
+            > .tmp/automation/review_bundle.md
+
+      - name: Run Gemini review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_REVIEW_MAX_ATTEMPTS: ${{ vars.GEMINI_REVIEW_MAX_ATTEMPTS }}
+        run: |
+          python scripts/automation/run_gemini_review.py \
+            --bundle .tmp/automation/review_bundle.md \
+            --output .tmp/automation/gemini_review.md
+
+      - name: Post PR comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --body-file .tmp/automation/gemini_review.md
+
+      - name: Ensure labels exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "needs-codex" --repo "${{ github.repository }}" --color "d73a4a" --description "Codex follow-up required" || true
+          gh label create "review-clean" --repo "${{ github.repository }}" --color "0e8a16" --description "Gemini review found no blocking follow-up" || true
+          gh label create "review-blocked" --repo "${{ github.repository }}" --color "fbca04" --description "Gemini review could not complete" || true
+
+      - name: Update labels from Gemini status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q "STATUS: NEEDS_CODEX" .tmp/automation/gemini_review.md; then
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --add-label "needs-codex"
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-clean" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-blocked" || true
+          fi
+
+          if grep -q "STATUS: REVIEW_CLEAN" .tmp/automation/gemini_review.md; then
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --add-label "review-clean"
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "needs-codex" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-blocked" || true
+          fi
+
+          if grep -q "STATUS: REVIEW_BLOCKED" .tmp/automation/gemini_review.md; then
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --add-label "review-blocked"
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "needs-codex" || true
+            gh pr edit "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --remove-label "review-clean" || true
+          fi
+
+      - name: Sync Codex queue issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/automation/sync_codex_queue_issue.py \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --branch "${{ github.event.pull_request.head.ref }}" \
+            --review-file .tmp/automation/gemini_review.md
+
+      - name: Fail when review is blocked
+        run: |
+          if grep -q "STATUS: REVIEW_BLOCKED" .tmp/automation/gemini_review.md; then
+            exit 1
+          fi
