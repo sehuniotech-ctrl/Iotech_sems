@@ -75,3 +75,11 @@ If you later add a Codex watcher, it should monitor:
 - PR label `needs-codex`
 - New PR comment whose header is `# Gemini Review`
 - Updated issue body matching `Codex Action Request`
+
+## Gemini model
+
+The default model is `gemini-2.5-flash` because free-tier API keys may have no quota for `gemini-2.5-pro`.
+
+To override it, set the repository Actions variable:
+
+- `GEMINI_MODEL`

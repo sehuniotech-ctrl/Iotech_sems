@@ -88,7 +88,7 @@ STATUS: REVIEW_BLOCKED
         Path(args.output).write_text(blocked, encoding="utf-8")
         return 0
 
-    model = os.environ.get("GEMINI_MODEL") or "gemini-2.5-pro"
+    model = os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash"
     prompt = Path(args.bundle).read_text(encoding="utf-8")
 
     try:

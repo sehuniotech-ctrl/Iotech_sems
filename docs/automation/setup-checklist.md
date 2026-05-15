@@ -8,7 +8,7 @@ Complete this once in GitHub before relying on the loop.
 
 ## Optional repository variables
 
-- `GEMINI_MODEL`: defaults to `gemini-2.5-pro`
+- `GEMINI_MODEL`: defaults to `gemini-2.5-flash`
 
 ## Recommended labels
 
