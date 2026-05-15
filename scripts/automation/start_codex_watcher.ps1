@@ -1,5 +1,6 @@
 param(
     [int]$IntervalSeconds = 60,
+    [string]$GitHubToken,
     [switch]$DryRun
 )
 
@@ -15,6 +16,14 @@ if (-not $env:CODEX_WATCHER_THREAD_ID) {
 
 if (-not $env:CODEX_WATCHER_WORKSPACE) {
     $env:CODEX_WATCHER_WORKSPACE = "$RepoRoot"
+}
+
+if ($GitHubToken) {
+    $env:GITHUB_TOKEN = $GitHubToken
+}
+
+if (-not $env:GITHUB_TOKEN) {
+    Write-Warning "GITHUB_TOKEN is not set. Public repositories may still work, but authenticated polling is recommended."
 }
 
 $ArgsList = @(

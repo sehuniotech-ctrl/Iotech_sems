@@ -94,8 +94,15 @@ Defaults are set by `scripts/automation/start_codex_watcher.ps1` for this worksp
 
 - `CODEX_WATCHER_THREAD_ID=019dd240-2788-7e12-8b6e-220dac6f23c7`
 - `CODEX_WATCHER_WORKSPACE=D:\work\15_지선차단기`
+- `GITHUB_TOKEN` is optional for public repositories, but recommended for stable polling
 
 Override those environment variables if another machine or thread should take over.
+
+You can also pass a token when starting the watcher:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/automation/start_codex_watcher.ps1 -GitHubToken "<token>"
+```
 
 ## Gemini model
 
