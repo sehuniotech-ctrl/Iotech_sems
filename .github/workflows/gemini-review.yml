@@ -35,6 +35,7 @@ jobs:
             --pr "${{ github.event.pull_request.number }}" \
             --event-path "${{ github.event_path }}" \
             --rubric "docs/automation/review-rubric.md" \
+            --style-guide "docs/automation/schematic-style-guide.md" \
             > .tmp/automation/review_bundle.md
 
       - name: Run Gemini review

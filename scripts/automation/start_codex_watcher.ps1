@@ -29,7 +29,7 @@ if (-not $env:GITHUB_TOKEN) {
 
 $ArgsList = @(
     "scripts/automation/watch_codex_queue.py",
-    "--config", "docs/automation/codex-thread-link.example.json",
+    "--config", "docs/automation/codex-thread-link.json",
     "--interval", "$IntervalSeconds"
 )
 

@@ -33,10 +33,11 @@ Complete this once in GitHub before relying on the loop.
 
 1. Open a PR with the schematic template.
 2. Confirm the `Gemini PR Review` workflow runs.
-3. Confirm a PR comment titled `# Gemini Review` appears.
-4. Confirm either `needs-codex` or `review-clean` is added.
-5. If `needs-codex` is added, have Codex pick up the PR and apply the requested changes.
-6. Start the local watcher if you want Codex follow-up to run without manual pickup.
+3. Confirm the review bundle includes `docs/automation/schematic-style-guide.md`.
+4. Confirm a PR comment titled `# Gemini Review` appears.
+5. Confirm either `needs-codex` or `review-clean` is added.
+6. If `needs-codex` is added, have Codex pick up the PR and apply the requested changes.
+7. Start the local watcher if you want Codex follow-up to run without manual pickup.
 
 ## Notes
 

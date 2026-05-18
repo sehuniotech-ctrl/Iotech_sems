@@ -1,0 +1,97 @@
+# IOTECH KiCad Schematic Style Guide
+
+This guide is the required review standard for Smart Load schematic PRs.
+Gemini should use this document as the primary visual and electrical readability
+rubric when reviewing schematic-related changes.
+
+## Core Rules
+
+1. Signal flow
+   - Place inputs, sources, connectors, and sensor terminals on the left side of
+     each functional block.
+   - Place outputs, loads, relays, and field outputs on the right side.
+
+2. Power and ground direction
+   - Power ports such as +12V, +5V, +3.3V, and VCC must face upward.
+   - Ground ports such as GND, DGND, GNDA, AGND, and RS485_GND must face
+     downward.
+   - Wires must stop exactly at the power or ground port terminal. Wires must
+     not pass through the graphical body of a power or ground symbol.
+
+3. Functional grouping
+   - Group circuits as readable islands: Power Supply, MCU Core, Metering Core,
+     CT/ZCT Input, Voltage Sensing, RS-485, PLC, Relay Drive, and Load Switching.
+   - Leave visible whitespace between islands.
+   - Do not move unrelated islands when making a localized schematic change.
+
+4. Net label usage
+   - Use net labels for inter-island connections and long buses.
+   - Avoid long wires across the sheet.
+   - Net labels must not overlap pins, wires, reference designators, or values.
+
+5. Decoupling capacitors
+   - Decoupling capacitors should be placed close to the related IC power pins
+     or in a clearly named decoupling island.
+   - Each capacitor must have an unambiguous power and ground connection.
+
+6. No ambiguous junctions
+   - Avoid 4-way cross junctions with a single dot.
+   - Use staggered T-junctions to avoid misreading a crossing as a short.
+
+7. Text cleanliness
+   - Reference designators and values must not overlap wires, symbols, pin names,
+     pin numbers, or sheet borders.
+   - Repeated component text should be aligned on the same grid where possible.
+
+8. External terminals
+   - Any signal entering or leaving the PCB must have a connector or terminal
+     symbol.
+   - CT and ZCT sensor inputs must use visible terminal block or connector
+     symbols, not only net labels.
+
+9. Visual alignment and aesthetics
+   - Align the top edges of major ICs, especially STM32L053R8T6 and ATM90E26,
+     when doing a full-sheet cleanup.
+   - Place CT and ZCT sensing islands adjacent to each other and visually
+     symmetric where sheet space allows.
+   - Keep repeated resistor or capacitor banks aligned with uniform spacing.
+   - Balance large islands across the sheet. Avoid one overcrowded corner and one
+     empty corner unless the empty space is reserved for PCB notes or title
+     block clearance.
+
+10. Island-safe direct pin-to-component routing
+   - Direct Pin-to-Component routing is allowed only inside the same local island
+     and only when it improves readability.
+   - Good candidates: crystals, reset RC filters, boot pull resistors, required
+     pull-up or pull-down resistors, and local decoupling capacitors.
+   - Do not directly wire distant functional blocks together. Inter-island
+     signals must remain net-label based.
+   - If direct routing would crowd the IC, use a short pin stub plus a net label,
+     then place the local circuit in a named island.
+   - Direct wires must be short, orthogonal, and free of 4-way junctions.
+   - Decision rule:
+     - Use direct routing when the component belongs physically and visually to
+       the same IC island and the wire length stays short.
+     - Use net labels when the component belongs to a separate functional
+       island, when the wire would cross another block, or when direct routing
+       would reduce readability.
+     - If a local component is split into a named island for clarity, label the
+       island clearly, for example `ATM90 crystal local island` or
+       `MCU reset local island`.
+   - Reviewers should flag direct routing only when it creates long wires,
+     crosses island boundaries, or hides the relationship between the IC pin and
+     the local component.
+
+## Smart Load Specific Checks
+
+- MCU must remain STM32L053R8T6 unless the PR explicitly changes it.
+- Metering IC must remain ATM90E26-YU or the approved orderable variant unless
+  the PR explicitly changes it.
+- DCU UART/RS-485, PLC SPI, and ATM90 SPI nets must be named so their target is
+  clear.
+- Latching relay drive must clearly distinguish RELAY_ON_CTRL and
+  RELAY_OFF_CTRL.
+- Live/load switching nets must be visually separated from low-voltage MCU and
+  metering logic.
+- Any schematic change that affects connectivity should include updated PDF or
+  PNG preview artifacts for human review.

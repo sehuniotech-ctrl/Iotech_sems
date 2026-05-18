@@ -22,10 +22,13 @@ Use GitHub as the shared event hub between:
 
 ## Files
 
+- `docs/automation/project-workflow-guide.md`
 - `docs/automation/task-spec-template.md`
 - `docs/automation/review-rubric.md`
+- `docs/automation/schematic-style-guide.md`
 - `docs/automation/codex-action-template.md`
 - `docs/automation/codex-watcher-contract.md`
+- `docs/automation/codex-thread-link.json`
 - `docs/automation/codex-thread-link.example.json`
 - `docs/automation/setup-checklist.md`
 - `scripts/automation/build_review_bundle.py`
@@ -57,7 +60,7 @@ Codex should treat the latest PR comment that starts with `# Gemini Review` as t
 ## What this setup automates
 
 - Build a review bundle from the current PR
-- Call Gemini with repository rubric + task context
+- Call Gemini with repository rubric + schematic style guide + task context
 - Post the review back to the PR
 - Add `needs-codex` when further edits are required
 - Add `review-clean` when Gemini reports no blocking feedback
@@ -89,6 +92,8 @@ powershell -ExecutionPolicy Bypass -File scripts/automation/start_codex_watcher.
 ```
 
 The watcher reads `docs/automation/codex-thread-link.example.json`, then resolves the local target from environment variables.
+The starter script now uses `docs/automation/codex-thread-link.json`; keep the
+example file only as a portable template.
 
 Defaults are set by `scripts/automation/start_codex_watcher.ps1` for this workspace:
 
