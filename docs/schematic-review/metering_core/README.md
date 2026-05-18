@@ -13,6 +13,9 @@ preview artifacts from a GitHub PR.
   - KiCad PDF export for human visual inspection.
 - `METERING_CORE_island_safe_direct_routing_top_notes.png`
   - Rendered crop showing the updated island-safe direct routing rule notes.
+- `junction_audit.md`
+  - Coordinate-based audit of schematic junction objects.
+  - Records whether any true 4-way junctions exist in the schematic source.
 
 ## Review Focus
 
@@ -35,3 +38,14 @@ The main rule change being reviewed is:
 This snapshot does not claim the schematic is final for PCB release. It is a
 reviewable checkpoint so Gemini can flag style, connectivity, and documentation
 issues before the next Codex implementation pass.
+
+## Generated Outputs
+
+This review snapshot intentionally includes generated schematic preview
+artifacts:
+
+- PDF export: `METERING_CORE_island_safe_direct_routing.pdf`
+- PNG crop: `METERING_CORE_island_safe_direct_routing_top_notes.png`
+
+These files are included so reviewers can compare the KiCad source with a human
+readable preview.

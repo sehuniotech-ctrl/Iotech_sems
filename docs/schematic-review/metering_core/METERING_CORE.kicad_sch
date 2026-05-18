@@ -12388,6 +12388,28 @@
 
 	)
 
+	(text "Junction audit: 0 true 4-way crossings; visible dots are T-junctions"
+
+		(exclude_from_sim no)
+
+		(at 65.692 29.75 0)
+
+		(effects
+
+			(font
+
+				(size 0.9 0.9)
+
+			)
+
+			(justify left)
+
+		)
+
+		(uuid "b11f6c37-607c-4c1a-8c83-6f8966f12c6a")
+
+	)
+
 	(text "Main MCU Island - STM32L053R8T6 LQFP64, Source7 pin map, short stubs only"
 
 		(exclude_from_sim no)
