@@ -22,6 +22,9 @@ preview artifacts from a GitHub PR.
   - KiCad ERC report captured after the visual cleanup pass.
 - `PCB_ARTWORK_READINESS.md`
   - PCB/artwork readiness note for the 40 mm x 40 mm board transition.
+- `visual-clearance-audit.md`
+  - Explicit checklist for MCU power-pin text, PLC/module label boundaries,
+    power/ground port piercing, frame clearance, and similar visual failures.
 - `junction_audit.md`
   - Coordinate-based audit of schematic junction objects.
   - Records whether any true 4-way junctions exist in the schematic source.
@@ -57,6 +60,7 @@ artifacts:
 - PNG crop: `METERING_CORE_island_safe_direct_routing_top_notes.png`
 - Color PDF export: `METERING_CORE_color_review.pdf`
 - Color PNG crops: `METERING_CORE_color_review_*.png`
+- Visual clearance audit: `visual-clearance-audit.md`
 
 These files are included so reviewers can compare the KiCad source with a human
 readable preview.

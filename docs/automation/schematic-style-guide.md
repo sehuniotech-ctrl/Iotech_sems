@@ -42,6 +42,10 @@ rubric when reviewing schematic-related changes.
    - Reference designators and values must not overlap wires, symbols, pin names,
      pin numbers, or sheet borders.
    - Repeated component text should be aligned on the same grid where possible.
+   - IC pin names, pin numbers, net labels, and power labels must not be drawn
+     inside the filled body of a different symbol. If text is visually inside an
+     IC, connector, relay, or module body and it is not that symbol's intentional
+     internal pin name, the schematic fails visual review.
 
 8. External terminals
    - Any signal entering or leaving the PCB must have a connector or terminal
@@ -82,6 +86,49 @@ rubric when reviewing schematic-related changes.
      crosses island boundaries, or hides the relationship between the IC pin and
      the local component.
 
+11. IC top and bottom power-pin readability
+   - For vertical IC pins on the top or bottom edge, the connection point and
+     the visible pin text must stay outside the IC body. Wires should meet the
+     pin at the outside terminal and must not run through the filled IC body.
+   - Do not place DGND, GNDA, AGND, +3.3V, VDD, VSS, VDDA, VSSA, or similar
+     power text inside the MCU or IC body when it is meant to describe an
+     external net.
+   - If several power pins are close together, spread them on the symbol or use
+     a local decoupling island so pin numbers and pin names remain readable.
+   - Power-port text such as `+3.3V` must be above the rail or at the left/right
+     end of the rail with clear spacing. It must not overlap pin names or pin
+     numbers.
+
+12. Connector and module text boundary
+   - Header and module labels must start outside the symbol body. For example,
+     PLC RX/TX pin labels should be outside the `U_PLC` body or represented as
+     external net labels; they must not be visually buried inside the yellow
+     module box.
+   - Connector reference/value text must not touch the sheet frame. If a header
+     is too close to the top or right border, move the whole island inward or
+     shorten the note text.
+   - Pin numbers must be anchored near the actual pin terminal. Floating pin
+     numbers with no visible pin stroke or symbol boundary are not acceptable.
+
+13. Power and ground port clearance around ICs
+   - A power or ground port connected to an IC must sit outside the IC body with
+     the wire ending at the port terminal. The port graphic must not pierce or
+     overlap the IC body.
+   - Ground ports connected to lower pins must face downward and sit below the
+     wire, not inside the chip or module.
+   - Power ports connected to upper pins must face upward and sit above the
+     wire, not inside the chip or module.
+   - When a power rail feeds multiple pins, put the power-port symbol at one
+     uncluttered rail end, preferably the left end for a horizontal rail, and
+     keep at least one grid step of spacing from pin text.
+
+14. Sheet-frame clearance
+   - All text, labels, symbols, and wires must stay inside the drawing frame.
+   - Keep at least 2.54 mm clearance from the sheet frame for normal labels and
+     at least 5.08 mm for long note text.
+   - If an island cannot fit, move the island or shorten the note. Do not allow
+     titles to ride on the frame line.
+
 ## Smart Load Specific Checks
 
 - MCU must remain STM32L053R8T6 unless the PR explicitly changes it.
@@ -95,3 +142,6 @@ rubric when reviewing schematic-related changes.
   metering logic.
 - Any schematic change that affects connectivity should include updated PDF or
   PNG preview artifacts for human review.
+- Visual review must explicitly inspect the common failure cases documented in
+  `docs/schematic-review/metering_core/visual-clearance-audit.md` when that file
+  exists.

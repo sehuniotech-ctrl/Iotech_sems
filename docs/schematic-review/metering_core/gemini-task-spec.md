@@ -12,6 +12,10 @@
 - `docs/schematic-review/metering_core/METERING_CORE.kicad_sch`
 - `docs/schematic-review/metering_core/METERING_CORE_island_safe_direct_routing.pdf`
 - `docs/schematic-review/metering_core/METERING_CORE_island_safe_direct_routing_top_notes.png`
+- `docs/schematic-review/metering_core/METERING_CORE_color_review.pdf`
+- `docs/schematic-review/metering_core/METERING_CORE_color_review_full_hi.png`
+- `docs/schematic-review/metering_core/METERING_CORE_color_review_*.png`
+- `docs/schematic-review/metering_core/visual-clearance-audit.md`
 - `docs/schematic-review/metering_core/README.md`
 - `docs/automation/schematic-style-guide.md`
 
@@ -24,6 +28,14 @@
 - Confirm that inter-island signals remain net-label based.
 - Check whether the schematic source still contains visual or reviewability
   issues that Codex should fix in a narrow follow-up commit.
+- Specifically inspect the current visual clearance failure classes:
+  - MCU bottom/top vertical power-pin text drawn inside the chip body.
+  - `+3.3V`, DGND, or GNDA text overlapping pin names, pin numbers, or rails.
+  - Connector/header title text touching or crossing the sheet frame.
+  - Floating pin numbers without a visible pin stroke or nearby symbol boundary.
+  - PLC/module pin labels visually buried inside the module body instead of
+    starting outside the body.
+  - Power or ground port graphics piercing an IC/module body.
 
 ## Review Constraints
 
@@ -40,6 +52,11 @@ as:
 
 - stale or contradictory schematic notes
 - unreadable or clipped review text
+- IC, connector, power, or ground text overlapping symbol bodies or wires
+- top/bottom IC power pins whose text or connection stubs intrude into the IC
+  body
+- labels, references, values, or connector titles outside the sheet frame
+- floating pin numbers or module labels that cannot be tied to a visible pin
 - a style-guide rule that conflicts with the schematic README
 - missing review instructions that prevent future Codex/Gemini loops from
   targeting the schematic snapshot
@@ -47,4 +64,3 @@ as:
 Gemini should return `STATUS: REVIEW_CLEAN` only if the snapshot and review
 automation are ready for the next schematic implementation pass with no
 meaningful follow-up.
-
