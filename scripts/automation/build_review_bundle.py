@@ -48,6 +48,7 @@ def main() -> int:
     parser.add_argument("--pr", required=True, type=int)
     parser.add_argument("--event-path", required=True)
     parser.add_argument("--rubric", required=True)
+    parser.add_argument("--style-guide", default="")
     parser.add_argument("--task-spec", default="")
     args = parser.parse_args()
 
@@ -64,6 +65,7 @@ def main() -> int:
 
     task_spec = read_optional(Path(args.task_spec)) if args.task_spec else ""
     rubric = read_optional(Path(args.rubric))
+    style_guide = read_optional(Path(args.style_guide)) if args.style_guide else ""
 
     bundle = f"""# Review Bundle
 
@@ -86,6 +88,10 @@ def main() -> int:
 ## Shared Review Rubric
 
 {rubric}
+
+## Schematic Style Guide
+
+{style_guide}
 
 ## Optional Task Spec
 
