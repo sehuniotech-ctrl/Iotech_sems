@@ -181,6 +181,10 @@ rubric when reviewing schematic-related changes.
      recognizable as a normal diode symbol. Fix visual issues by moving the
      diode, moving labels, hiding package-only pin names, or redrawing local
      wires, not by stretching the diode body into an X/hourglass shape.
+   - Diode pin leads must not protrude beyond the relay rail they connect to.
+     If a custom symbol is needed, keep the electrical pin terminal on the rail
+     and draw any visible lead only inside the diode body span. A red lead stub
+     sticking above or below the green rail is a visual failure.
 
 17. Power-port text clearance
    - Power-port text such as `+3.3V`, `+5V`, and `+12V` must not overlap IC

@@ -18,9 +18,12 @@ Latest follow-up pass:
      like duplicated `K K` labels on the common rail.
    - Restored the flyback diode body geometry to a normal diode symbol after a
      failed stub-removal attempt had distorted it into an hourglass/X shape.
+   - Removed the remaining red diode pin lead protrusion above the relay rail by
+     keeping the electrical terminal on the rail and drawing the visible diode
+     lead only inside the symbol span.
    - Shortened the MCU island title and raised the top `+3.3V` text so it no
      longer collides with `LQFP64`/VDD pin text.
-   - Check images: `METERING_CORE_color_review_relay_diode_restored_zoom.png`,
+   - Check images: `METERING_CORE_color_review_relay_diode_clean_leads.png`,
      `METERING_CORE_color_review_mcu_3v3_text_fix.png`.
 
 1. MCU bottom ground ports
