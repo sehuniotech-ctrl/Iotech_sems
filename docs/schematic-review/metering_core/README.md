@@ -13,6 +13,15 @@ preview artifacts from a GitHub PR.
   - KiCad PDF export for human visual inspection.
 - `METERING_CORE_island_safe_direct_routing_top_notes.png`
   - Rendered crop showing the updated island-safe direct routing rule notes.
+- `METERING_CORE_color_review.pdf`
+  - Color KiCad PDF export used for visual review before PCB/artwork.
+- `METERING_CORE_color_review_*.png`
+  - Rendered color crops for the reset island, MCU bottom labels, DC12V input,
+    PLC header, and full-sheet visual inspection.
+- `METERING_CORE_erc_after_visual_fix.rpt`
+  - KiCad ERC report captured after the visual cleanup pass.
+- `PCB_ARTWORK_READINESS.md`
+  - PCB/artwork readiness note for the 40 mm x 40 mm board transition.
 - `junction_audit.md`
   - Coordinate-based audit of schematic junction objects.
   - Records whether any true 4-way junctions exist in the schematic source.
@@ -46,6 +55,8 @@ artifacts:
 
 - PDF export: `METERING_CORE_island_safe_direct_routing.pdf`
 - PNG crop: `METERING_CORE_island_safe_direct_routing_top_notes.png`
+- Color PDF export: `METERING_CORE_color_review.pdf`
+- Color PNG crops: `METERING_CORE_color_review_*.png`
 
 These files are included so reviewers can compare the KiCad source with a human
 readable preview.

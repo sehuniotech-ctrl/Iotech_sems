@@ -4032,7 +4032,7 @@
 
 				(pin power_in line
 
-					(at 2.54 -48.26 90)
+					(at 5.08 -48.26 90)
 
 					(length 2.54)
 
@@ -4312,7 +4312,7 @@
 
 				(pin power_in line
 
-					(at 0 -48.26 90)
+					(at -5.08 -48.26 90)
 
 					(length 2.54)
 
@@ -4902,7 +4902,7 @@
 
 				(pin passive line
 
-					(at 0 -48.26 90)
+					(at -2.54 -48.26 90)
 
 					(length 2.54)
 
@@ -6304,7 +6304,7 @@
 
 				(pin passive line
 
-					(at 0 -48.26 90)
+					(at 2.54 -48.26 90)
 
 					(length 2.54)
 
@@ -12184,13 +12184,13 @@
 
 		(exclude_from_sim no)
 
-		(at 220 247 0)
+		(at 220 241 0)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -15772,13 +15772,13 @@
 
 	(label "DC12V_IN"
 
-		(at 20.32 267.97 180)
+		(at 25.4 267.97 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -16615,13 +16615,13 @@
 
 	(label "DC12V_GND"
 
-		(at 20.32 273.05 180)
+		(at 25.4 273.05 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -28528,7 +28528,7 @@
 
 		(property "Reference" "U_MCU"
 
-			(at 314.76 196.99 0)
+			(at 314.76 203.2 0)
 
 			(show_name no)
 
@@ -28550,7 +28550,7 @@
 
 		(property "Value" "STM32L053R8T6"
 
-			(at 340.16 196.99 0)
+			(at 340.16 203.2 0)
 
 			(show_name no)
 
@@ -33168,17 +33168,17 @@
 
 
 
-	(text "MCU_PLC SPI pin header - separate from MCU_DCU UART and MCU_METER SPI"
+	(text "MCU_PLC SPI header"
 
 		(exclude_from_sim no)
 
-		(at 344 12 0)
+		(at 336 35 0)
 
 		(effects
 
 			(font
 
-				(size 1.1 1.1)
+				(size 0.9 0.9)
 
 				(bold yes)
 
