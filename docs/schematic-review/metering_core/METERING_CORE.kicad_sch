@@ -2225,7 +2225,7 @@
 			)
 			(symbol "TerminalBlock_1x02_Sensor_1_1"
 				(pin passive line
-					(at 5.08 -7.5 180)
+					(at 6.35 -7.5 180)
 					(length 2.54)
 					(name "P"
 						(effects
@@ -2243,7 +2243,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 7.5 180)
+					(at 6.35 7.5 180)
 					(length 2.54)
 					(name "N"
 						(effects
@@ -12158,11 +12158,11 @@
 
 )
 
-	(text "MCU Power Island - rebuilt with five 0.1uF capacitors, >=400mil spacing"
+	(text "MCU Power Island - five 0.1uF caps, >=400mil spacing"
 
 		(exclude_from_sim no)
 
-		(at 285 208 0)
+		(at 250 217 0)
 
 		(effects
 
@@ -13260,7 +13260,7 @@
 
 		(pts
 
-			(xy 330 198.26) (xy 330 203.34)
+			(xy 330 198.26) (xy 330 205.88)
 
 		)
 
@@ -13293,26 +13293,6 @@
 		)
 
 		(uuid "88a4f8d0-6932-4b74-b026-a20a0ca2f1d6")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 324.92 203.34) (xy 330 203.34)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "bb7ddf7f-e524-4f71-a9fb-5d15ea00a479")
 
 	)
 
@@ -14260,7 +14240,7 @@
 
 		(pts
 
-			(xy 335.08 198.26) (xy 335.08 203.34)
+			(xy 335.08 198.26) (xy 335.08 205.88)
 
 		)
 
@@ -14276,24 +14256,95 @@
 
 	)
 
-	(wire
-
-		(pts
-
-			(xy 332.54 203.34) (xy 335.08 203.34)
-
+	(symbol
+		(lib_id "power:DGND")
+		(at 324.92 203.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1b77bb28-cefd-4bc8-b070-623566f79f1c")
+		(property "Reference" "#PWR_MCU_BOTTOM_DGND1"
+			(at 327.46 199.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
 		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
+		(property "Value" "DGND"
+			(at 321.3 207.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.0 1.0)) (justify left))
 		)
+		(property "Footprint" "" (at 324.92 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 324.92 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 324.92 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "ed588054-c8f5-4fb5-83ce-09ad92ef25bd"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_DGND1") (unit 1))))
+	)
 
-		(uuid "e7d90bfa-5395-4c93-8ef6-33b70972d1aa")
+	(symbol
+		(lib_id "power:DGND")
+		(at 330 205.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d46c840e-0268-45af-b252-21c6f0859ad6")
+		(property "Reference" "#PWR_MCU_BOTTOM_DGND2" (at 332.54 202.07 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Value" "DGND" (at 332.54 206.388 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left)))
+		(property "Footprint" "" (at 330 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 330 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 330 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "2f9bfe0d-6309-481e-98d8-fa4041d5d3d2"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_DGND2") (unit 1))))
+	)
 
+	(symbol
+		(lib_id "power:GNDA")
+		(at 332.54 203.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8a0a0130-56a9-4302-ae11-98b92a8d770b")
+		(property "Reference" "#PWR_MCU_BOTTOM_GNDA1" (at 335.08 199.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Value" "GNDA" (at 335.1 202.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left)))
+		(property "Footprint" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "e21c59db-fa22-436c-b03e-0b9cac703da1"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_GNDA1") (unit 1))))
+	)
+
+	(symbol
+		(lib_id "power:GNDA")
+		(at 335.08 205.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21b49c91-43c0-46d3-9b5e-3e1cbb6e44e8")
+		(property "Reference" "#PWR_MCU_BOTTOM_GNDA2" (at 337.62 202.07 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Value" "GNDA" (at 337.62 206.388 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left)))
+		(property "Footprint" "" (at 335.08 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 335.08 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 335.08 205.88 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "66d2d6bb-2df9-4e5e-bcdb-f2d0c1abfecf"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_GNDA2") (unit 1))))
 	)
 
 	(wire
@@ -15962,24 +16013,6 @@
 
 	)
 
-	(label "DGND"
-
-		(at 330 203.34 90)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-		)
-
-		(uuid "1e510175-b198-4083-a364-9571f46a3b67")
-
-	)
-
 	(label "METER_WARN"
 
 		(at 190 265.64 0)
@@ -16529,24 +16562,6 @@
 
 	)
 
-	(label "DGND"
-
-		(at 330 203.34 90)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-		)
-
-		(uuid "56ad3237-96b8-4e20-a9cc-23747a129e21")
-
-	)
-
 	(label "METER_ZX"
 
 		(at 355.4 180.48 0)
@@ -16604,24 +16619,6 @@
 		)
 
 		(uuid "5e10f8c8-0e70-4ef0-a8de-eb50bb5d3581")
-
-	)
-
-	(label "DGND"
-
-		(at 330 203.34 90)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-		)
-
-		(uuid "600bd877-eca8-4f3e-a578-cde429e9ac9e")
 
 	)
 
@@ -17480,13 +17477,13 @@
 
 		(property "Value" "+3.3V"
 
-			(at 39.37 136.398 0)
+			(at 34.2 132.6 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1.27 1.27)) (justify left))
+			(effects (font (size 1.27 1.27)) (justify right))
 
 		)
 
@@ -17624,13 +17621,13 @@
 
 		(property "Value" "+3.3V"
 
-			(at 39.37 126.238 0)
+			(at 34.2 122.44 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1.27 1.27)) (justify left))
+			(effects (font (size 1.27 1.27)) (justify right))
 
 		)
 
@@ -17727,24 +17724,6 @@
 		)
 
 		(uuid "a45e9e53-d8d6-4757-b902-e57d5ceb4df7")
-
-	)
-
-	(label "GNDA"
-
-		(at 332.54 203.34 90)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-		)
-
-		(uuid "a5da3553-7705-412b-9155-7c55c5ec596d")
 
 	)
 
@@ -17925,24 +17904,6 @@
 		)
 
 		(uuid "b6494225-33b6-40b5-9270-aa52c6068b42")
-
-	)
-
-	(label "DGND"
-
-		(at 330 203.34 90)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-		)
-
-		(uuid "b76401f4-744d-43b9-b2e7-cd5c904427e7")
 
 	)
 
@@ -32502,7 +32463,7 @@
 
 		(pts
 
-			(xy 246.38 58.42) (xy 284.96 58.42)
+			(xy 284.96 58.42) (xy 284.96 68.58)
 
 		)
 
@@ -32514,7 +32475,47 @@
 
 		)
 
-		(uuid "2b109bc1-9340-4ec2-9c12-a82c29c74726")
+		(uuid "7d045040-b28c-4fde-b40b-bc14869366a7")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 284.96 68.58) (xy 246.38 68.58)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "d58b3766-4afb-44bb-a463-7b072af88f70")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 246.38 68.58) (xy 246.38 58.42)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "b5946954-6b98-484b-b761-45a60e17ac02")
 
 	)
 
@@ -34518,7 +34519,7 @@
 
 	(wire
 		(pts
-			(xy 25.93 41.91) (xy 37.93 41.91)
+			(xy 27.20 41.91) (xy 37.93 41.91)
 		)
 		(stroke
 			(width 0)
@@ -34529,7 +34530,7 @@
 
 	(wire
 		(pts
-			(xy 25.93 56.91) (xy 37.93 56.91)
+			(xy 27.20 56.91) (xy 37.93 56.91)
 		)
 		(stroke
 			(width 0)
@@ -34540,7 +34541,7 @@
 
 	(wire
 		(pts
-			(xy 24.12 170.18) (xy 34.12 170.18)
+			(xy 25.39 170.18) (xy 34.12 170.18)
 		)
 		(stroke
 			(width 0)
@@ -34551,7 +34552,7 @@
 
 	(wire
 		(pts
-			(xy 24.12 185.18) (xy 34.12 185.18)
+			(xy 25.39 185.18) (xy 34.12 185.18)
 		)
 		(stroke
 			(width 0)

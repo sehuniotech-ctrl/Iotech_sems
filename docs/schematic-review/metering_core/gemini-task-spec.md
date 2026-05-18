@@ -41,6 +41,14 @@
   - PLC/module pin labels visually buried inside the module body instead of
     starting outside the body.
   - Power or ground port graphics piercing an IC/module body.
+  - Bottom-edge MCU or IC ground pins routed sideways into DGND/GNDA labels
+    instead of straight down to downward ground ports.
+  - `+3.3V`, `+12V`, or other power-port symbols placed in the middle of a wire
+    rather than snapped to a wire/rail endpoint.
+  - CT/ZCT terminal-block pin strokes drawn from inside the connector body
+    rather than protruding outside the body edge.
+  - Latching relay coil-common routing crossing the ON/OFF transistor or
+    flyback diode lanes when a clear lower/upper lane is available.
 
 ## Review Constraints
 
@@ -60,7 +68,11 @@ as:
 - IC, connector, power, or ground text overlapping symbol bodies or wires
 - top/bottom IC power pins whose text or connection stubs intrude into the IC
   body
+- bottom-edge ground pins that do not drop vertically to a downward ground port
 - labels, references, values, or connector titles outside the sheet frame
+- power ports that overlap a mid-span wire or look like a dangling V marker
+- terminal-block pins that visually start inside the connector body
+- relay coil wiring that crosses through the latching relay driver graphics
 - floating pin numbers or module labels that cannot be tied to a visible pin
 - a style-guide rule that conflicts with the schematic README
 - missing review instructions that prevent future Codex/Gemini loops from

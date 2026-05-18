@@ -1,10 +1,10 @@
-ERC report (2026-05-18T11:29:42, Encoding UTF8)
+ERC report (2026-05-18T12:04:01, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(25.93 mm, 41.91 mm): Horizontal Wire, length 12.00 mm
+    @(27.20 mm, 41.91 mm): Horizontal Wire, length 10.73 mm
 [footprint_link_issues]: 풋프린트 'TerminalBlock_bornier-2_P5.08mm'을(를) 라이브러리 'TerminalBlock'에서 찾을 수 없습니다
     ; warning
     @(20.85 mm, 49.41 mm): Symbol J_CT1 [TerminalBlock_1x02_Sensor]
@@ -19,10 +19,10 @@ Report includes: Errors, Warnings
     @(44.93 mm, 41.91 mm): Vertical Wire, length 3.69 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(25.93 mm, 56.91 mm): Horizontal Wire, length 12.00 mm
+    @(27.20 mm, 56.91 mm): Horizontal Wire, length 10.73 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(25.93 mm, 56.91 mm): Symbol J_CT1 Pin 1 [P, Passive, Line]
+    @(27.20 mm, 56.91 mm): Symbol J_CT1 Pin 1 [P, Passive, Line]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(44.93 mm, 45.60 mm): Symbol R_CT1_SHUNT Pin 1 [Passive, Line]
@@ -94,7 +94,7 @@ Report includes: Errors, Warnings
     @(107.95 mm, 130.81 mm): Label 'ATM90_CF1'
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(24.12 mm, 170.18 mm): Horizontal Wire, length 10.00 mm
+    @(25.39 mm, 170.18 mm): Horizontal Wire, length 8.73 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(34.12 mm, 170.18 mm): Horizontal Wire, length 16.29 mm
@@ -133,10 +133,10 @@ Report includes: Errors, Warnings
     @(41.12 mm, 181.49 mm): Vertical Wire, length 3.69 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(24.12 mm, 185.18 mm): Symbol J_ZCT1 Pin 1 [P, Passive, Line]
+    @(25.39 mm, 185.18 mm): Symbol J_ZCT1 Pin 1 [P, Passive, Line]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(24.12 mm, 185.18 mm): Horizontal Wire, length 10.00 mm
+    @(25.39 mm, 185.18 mm): Horizontal Wire, length 8.73 mm
 [lib_symbol_mismatch]: 심볼 'C'가 라이브러리 'Device'의 복사본과 일치하지 않음
     ; warning
     @(165.00 mm, 89.37 mm): Symbol C_VP [C]
@@ -464,9 +464,17 @@ Report includes: Errors, Warnings
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(239.84 mm, 109.92 mm): Symbol U5 Pin 1 [RO, Output, Line]
+[no_connect_connected]: A pin with a "no connection" flag is connected
+    ; warning
+    @(214.84 mm, 153.73 mm): Symbol J_UART_CHECK Pin 3 [TX, Passive, Line]
+    @(347.78 mm, 114.44 mm): No Connect
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(239.84 mm, 112.46 mm): Horizontal Wire, length 5.84 mm
+[no_connect_connected]: A pin with a "no connection" flag is connected
+    ; warning
+    @(214.84 mm, 156.27 mm): Symbol J_UART_CHECK Pin 4 [RX, Passive, Line]
+    @(347.78 mm, 116.98 mm): No Connect
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(239.84 mm, 115.00 mm): Horizontal Wire, length 5.84 mm
@@ -595,7 +603,10 @@ Report includes: Errors, Warnings
     @(170.00 mm, 235.16 mm): Horizontal Wire, length 20.00 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(246.38 mm, 58.42 mm): Horizontal Wire, length 38.58 mm
+    @(284.96 mm, 58.42 mm): Vertical Wire, length 10.16 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(284.96 mm, 68.58 mm): Horizontal Wire, length 38.58 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(170.00 mm, 240.24 mm): Horizontal Wire, length 20.00 mm
@@ -694,10 +705,10 @@ Report includes: Errors, Warnings
     @(312.22 mm, 122.06 mm): Horizontal Wire, length 6.35 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(324.92 mm, 96.66 mm): Horizontal Wire, length 10.16 mm
+    @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 Hidden pin 1 [+3.3V, Power input, Line]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 Hidden pin 1 [+3.3V, Power input, Line]
+    @(324.92 mm, 96.66 mm): Horizontal Wire, length 10.16 mm
 [lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
     ; warning
     @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 [+3.3V]
@@ -889,7 +900,10 @@ Report includes: Errors, Warnings
     @(370.00 mm, 97.86 mm): Vertical Wire, length 2.14 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(324.92 mm, 203.34 mm): Horizontal Wire, length 5.08 mm
+    @(324.92 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_DGND1 Hidden pin 1 [DGND, Power input, Line]
+[lib_symbol_issues]: 심볼 DGND를 라이브러리 'power'에서 찾을 수 없음
+    ; warning
+    @(324.92 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_DGND1 [DGND]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(355.40 mm, 144.92 mm): Label 'SWCLK'
@@ -901,19 +915,28 @@ Report includes: Errors, Warnings
     @(310.24 mm, 227.62 mm): Symbol #PWR_MCU_G2 [DGND]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(330.00 mm, 198.26 mm): Vertical Wire, length 5.08 mm
+    @(330.00 mm, 198.26 mm): Vertical Wire, length 7.62 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(332.54 mm, 198.26 mm): Vertical Wire, length 5.08 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(335.08 mm, 198.26 mm): Vertical Wire, length 5.08 mm
+    @(330.00 mm, 205.88 mm): Symbol #PWR_MCU_BOTTOM_DGND2 Hidden pin 1 [DGND, Power input, Line]
+[lib_symbol_issues]: 심볼 DGND를 라이브러리 'power'에서 찾을 수 없음
+    ; warning
+    @(330.00 mm, 205.88 mm): Symbol #PWR_MCU_BOTTOM_DGND2 [DGND]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(335.08 mm, 198.26 mm): Vertical Wire, length 7.62 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(347.78 mm, 175.40 mm): Horizontal Wire, length 8.89 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(332.54 mm, 203.34 mm): Horizontal Wire, length 2.54 mm
+    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_GNDA1 Hidden pin 1 [GNDA, Power input, Line]
+[lib_symbol_mismatch]: 심볼 'GNDA'가 라이브러리 'power'의 복사본과 일치하지 않음
+    ; warning
+    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_GNDA1 [GNDA]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(347.78 mm, 177.94 mm): Horizontal Wire, length 6.35 mm
@@ -929,6 +952,12 @@ Report includes: Errors, Warnings
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(347.78 mm, 183.02 mm): Horizontal Wire, length 6.35 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(335.08 mm, 205.88 mm): Symbol #PWR_MCU_BOTTOM_GNDA2 Hidden pin 1 [GNDA, Power input, Line]
+[lib_symbol_mismatch]: 심볼 'GNDA'가 라이브러리 'power'의 복사본과 일치하지 않음
+    ; warning
+    @(335.08 mm, 205.88 mm): Symbol #PWR_MCU_BOTTOM_GNDA2 [GNDA]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(347.78 mm, 185.56 mm): Horizontal Wire, length 7.62 mm
@@ -996,7 +1025,7 @@ Report includes: Errors, Warnings
     ; warning
     @(355.96 mm, 227.62 mm): Symbol #PWR_MCU_G5 [DGND]
 
- ** ERC messages: 331  Errors 0  Warnings 331
+ ** ERC messages: 340  Errors 0  Warnings 340
 
  ** Ignored checks:
     - Global label only appears once in the schematic

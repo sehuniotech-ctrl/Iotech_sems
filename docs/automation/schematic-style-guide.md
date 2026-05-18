@@ -121,6 +121,14 @@ rubric when reviewing schematic-related changes.
    - When a power rail feeds multiple pins, put the power-port symbol at one
      uncluttered rail end, preferably the left end for a horizontal rail, and
      keep at least one grid step of spacing from pin text.
+   - Bottom-edge IC ground pins must route straight downward from the pin
+     terminal to a downward ground port. Do not fold adjacent bottom pins into a
+     U-shaped side label bundle, and do not place DGND/GNDA text between or
+     inside the IC pins.
+   - Power ports such as `+3.3V` and `+12V` must be placed at the end of the
+     wire or rail. A power-port glyph or label placed on the middle of a wire is
+     a visual-review failure because it looks like a dangling marker or an
+     overlap.
 
 14. Sheet-frame clearance
    - All text, labels, symbols, and wires must stay inside the drawing frame.
@@ -128,6 +136,22 @@ rubric when reviewing schematic-related changes.
      at least 5.08 mm for long note text.
    - If an island cannot fit, move the island or shorten the note. Do not allow
      titles to ride on the frame line.
+
+15. Connector pin boundary
+   - Connector and terminal-block pin strokes must protrude from the outside
+     edge of the symbol body. A wire must connect to the external pin terminal,
+     not appear to start from inside the connector box.
+   - Pin numbers and pin names on terminal blocks must not be visually buried
+     inside the body border. If the symbol footprint is small, move the text
+     outside or enlarge the body rather than letting the pin stroke intrude.
+
+16. Relay coil routing lanes
+   - Latching relay ON and OFF coil-drive nets must use separate horizontal
+     lanes. The common coil pin must not route through the ON/OFF transistor,
+     diode, or control-label area when there is open space below or above.
+   - Relay coil wires should leave the relay pin orthogonally, then turn in an
+     uncluttered lane. Do not cross through `RELAY_ON_CTRL`, `RELAY_OFF_CTRL`,
+     flyback diode labels, or transistor bodies.
 
 ## Smart Load Specific Checks
 

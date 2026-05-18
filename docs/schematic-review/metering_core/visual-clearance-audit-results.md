@@ -5,6 +5,31 @@ the color schematic preview.
 
 ## Fixed Hotspots
 
+Latest follow-up pass:
+
+1. MCU bottom ground ports
+   - Removed the U-shaped DGND/GNDA side-label bundle at the bottom of `U_MCU`.
+   - Each bottom ground-related pin now drops vertically to a downward ground
+     power port placed below the IC edge.
+   - Check image: `METERING_CORE_color_review_mcu_bottom_ground_fix.png`.
+
+2. ATM90 +3.3V power-port text
+   - Moved the visible `+3.3V` text off the AVDD/DVDD wires so the power port
+     is read as a snapped endpoint, not as a mid-wire dangling marker.
+   - Check image: `METERING_CORE_color_review_atm90_avdd_power_fix.png`.
+
+3. CT/ZCT terminal-block pin boundary
+   - Adjusted the shared CT/ZCT terminal symbol so pin terminals protrude
+     outside the connector body before the sensor wires begin.
+   - Check image: `METERING_CORE_color_review_ct_terminal_fix.png`.
+
+4. Latching relay COIL_COM routing
+   - Re-routed `K_RLY1` pin 2 (`COIL_COM`) into a lower clear lane so it does
+     not run through the ON driver/flyback diode area.
+   - Check image: `METERING_CORE_color_review_relay_coil_common_fix.png`.
+
+Previous pass:
+
 1. MCU lower power pins
    - Moved `DGND` / `GNDA` labels below the `U_MCU` lower pin terminals.
    - Shortened/redirected the local wires so the labels no longer sit inside

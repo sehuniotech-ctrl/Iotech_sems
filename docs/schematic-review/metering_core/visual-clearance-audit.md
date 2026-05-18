@@ -17,6 +17,14 @@ failure modes:
   visual-review failures.
 - Power and ground port graphics must not pierce IC or module bodies.
 - Long island notes and connector titles must keep frame clearance.
+- Bottom-edge IC ground pins must drop vertically to downward ground ports; do
+  not use side-facing DGND/GNDA net-label bundles between IC pins.
+- Power ports must sit at the end of their wire or rail, not on top of the
+  middle of a conductor.
+- Terminal-block pins must protrude outward from the symbol body so wires start
+  outside the box.
+- Latching relay coil-common wiring must use its own clear lane and must not
+  pass through the ON/OFF driver graphics.
 
 ## Current Failure Examples To Check
 
@@ -50,6 +58,18 @@ failure modes:
    - Capacitor references/values must not overlap each other.
    - `+3.3V` and output capacitor labels must be separated from the horizontal
      rail and from each other.
+
+7. CT/ZCT terminal blocks
+   - `J_CT1` and `J_ZCT1` pin strokes must be visible outside the connector
+     body before the sensor wires begin.
+   - Pin numbers and N/P labels must remain readable and not look like they
+     are embedded deep inside the terminal block.
+
+8. Latching relay drive island
+   - `K_RLY1` pin 2 (`COIL_COM`) must not share or cross the `RLY_ON` transistor
+     lane when a lower routing lane is available.
+   - ON/OFF flyback diode text and coil labels must not touch the relay pin
+     wires.
 
 ## Required Verification Before PCB
 
