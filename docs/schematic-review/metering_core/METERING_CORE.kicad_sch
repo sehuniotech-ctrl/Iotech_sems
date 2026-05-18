@@ -1528,7 +1528,7 @@
 
 				)
 
-				(pin input line
+				(pin passive line
 
 					(at -10.16 2.54 0)
 
@@ -4900,7 +4900,7 @@
 
 				)
 
-				(pin passive line
+				(pin no_connect line
 
 					(at -2.54 -48.26 90)
 
@@ -4908,7 +4908,7 @@
 
 					(hide yes)
 
-					(name "VSS"
+					(name "DGND"
 
 						(effects
 
@@ -6178,7 +6178,7 @@
 
 				)
 
-				(pin input line
+				(pin passive line
 
 					(at -17.78 35.56 0)
 
@@ -12138,9 +12138,9 @@
 
 				(pin passive line (at -20.32 -12.70 0) (length 2.54) (name "RESET_L" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))
 
-				(pin power_in line (at 0 -22.86 90) (length 2.54) (name "+3.3V" (effects (font (size 1 1)))) (number "VCC" (effects (font (size 1 1)))))
+				(pin power_in line (at 0 -22.86 90) (length 2.54) (name "DGND" (effects (font (size 1 1)))) (number "GND" (effects (font (size 1 1)))))
 
-				(pin power_in line (at 0 22.86 270) (length 2.54) (name "DGND" (effects (font (size 1 1)))) (number "GND" (effects (font (size 1 1)))))
+				(pin power_in line (at 0 22.86 270) (length 2.54) (name "+3.3V" (effects (font (size 1 1)))) (number "VCC" (effects (font (size 1 1)))))
 
 				(pin passive line (at 20.32 -7.62 180) (length 2.54) (name "PLC_TX_P" (effects (font (size 0.01 0.01)))) (number "J13_3" (effects (font (size 1 1)))))
 
@@ -12912,6 +12912,14 @@
 
 	(no_connect
 
+		(at 347.78 172.86)
+
+		(uuid "0f4a3511-2d6d-4c28-9d7a-4d19f23fd5e0")
+
+	)
+
+	(no_connect
+
 		(at 312.22 134.76)
 
 		(uuid "3f32b934-38da-4808-be2f-adf6b4f97cb2")
@@ -12971,14 +12979,6 @@
 		(at 312.22 142.38)
 
 		(uuid "7b8657ff-60c6-4e17-82c9-7b2f23240c39")
-
-	)
-
-	(no_connect
-
-		(at 312.22 124.6)
-
-		(uuid "8fed8be6-4e34-4776-a180-51ff19db26bf")
 
 	)
 
@@ -13123,14 +13123,6 @@
 		(at 347.78 116.98)
 
 		(uuid "df3d1c53-1a1f-46d1-9208-baa088874231")
-
-	)
-
-	(no_connect
-
-		(at 312.22 129.68)
-
-		(uuid "e68edaf0-8a9d-4bc0-abc7-4be2684d8e15")
 
 	)
 
@@ -13281,6 +13273,46 @@
 		)
 
 		(uuid "0c21370a-7086-427d-b02c-64ddb9a2e2fc")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 324.92 198.26) (xy 324.92 203.34)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "88a4f8d0-6932-4b74-b026-a20a0ca2f1d6")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 324.92 203.34) (xy 330 203.34)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "bb7ddf7f-e524-4f71-a9fb-5d15ea00a479")
 
 	)
 
@@ -14228,6 +14260,46 @@
 
 		(pts
 
+			(xy 335.08 198.26) (xy 335.08 203.34)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "baf9da84-731e-4e88-a868-2f8755c56ce8")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 332.54 203.34) (xy 335.08 203.34)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "e7d90bfa-5395-4c93-8ef6-33b70972d1aa")
+
+	)
+
+	(wire
+
+		(pts
+
 			(xy 187.17 85.56) (xy 188.44 85.56)
 
 		)
@@ -14870,26 +14942,6 @@
 
 		(pts
 
-			(xy 312.22 111.9) (xy 305 111.9)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "a8244d88-5fe9-4029-a3b1-d5b3ffd4dbaa")
-
-	)
-
-	(wire
-
-		(pts
-
 			(xy 58.03 185.18) (xy 86.12 185.18)
 
 		)
@@ -14903,26 +14955,6 @@
 		)
 
 		(uuid "aa852efd-a32a-4ae0-9804-a55cac44f9a6")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 312.22 116.98) (xy 305 116.98)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "aaab033a-209b-4966-8ec8-9c9cfb2355dc")
 
 	)
 
@@ -16733,110 +16765,6 @@
 
 	)
 
-	(symbol
-
-		(lib_id "power:+3.3V")
-
-		(at 305 116.98 0)
-
-		(unit 1)
-
-		(body_style 1)
-
-		(exclude_from_sim no)
-
-		(in_bom yes)
-
-		(on_board yes)
-
-		(in_pos_files yes)
-
-		(dnp no)
-
-		(uuid "fb1335ec-cb39-4a71-80ed-ab35b2bb7c3f")
-
-		(property "Reference" "#PWR_AUTO_33V_002"
-
-			(at 307.54 113.17 0)
-
-			(hide yes)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Value" "+3.3V"
-
-			(at 307.54 117.488 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)) (justify left))
-
-		)
-
-		(property "Footprint" ""
-
-			(at 305 116.98 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Datasheet" ""
-
-			(at 305 116.98 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Description" ""
-
-			(at 305 116.98 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(pin "1" (uuid "dbf0e7c6-16ce-4f16-9dca-d0780ab0f518"))
-
-		(instances
-
-			(project "METERING_CORE"
-
-				(path "/e4236fbb-ccab-4d10-bcea-7fda722d6751"
-
-					(reference "#PWR_AUTO_33V_002")
-
-					(unit 1)
-
-				)
-
-			)
-
-		)
-
-	)
-
 	(label "SWDIO"
 
 		(at 354.13 142.38 0)
@@ -17940,26 +17868,6 @@
 
 	)
 
-	(label "MCU_RESET"
-
-		(at 305 111.9 180)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-			(justify right)
-
-		)
-
-		(uuid "af00c2f2-f0e8-4058-841e-098c79b2fe82")
-
-	)
-
 	(label "SWCLK"
 
 		(at 355.4 144.92 0)
@@ -18730,7 +18638,7 @@
 
 	(label "V_SENSE_N"
 
-		(at 107.95 181.61 0)
+		(at 107.95 146.05 0)
 
 		(effects
 
@@ -18790,7 +18698,7 @@
 
 	(label "V_SENSE_P"
 
-		(at 107.95 176.53 0)
+		(at 107.95 140.97 0)
 
 		(effects
 
@@ -32058,6 +31966,18 @@
 
 	)
 
+	(junction
+
+		(at 236.22 55.88)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "1ae32ed7-4c9a-4ad4-9e58-f1f3c540a605")
+
+	)
+
 	(symbol
 
 		(lib_id "Device:R")
@@ -32251,6 +32171,66 @@
 		(color 0 0 0 0)
 
 		(uuid "9f815ce0-c397-441b-8e18-aab6ffc64dd5")
+
+	)
+
+	(junction
+
+		(at 220.98 38.1)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "7c55d0e0-2f4b-45a7-a816-2b6a2f70a5bf")
+
+	)
+
+	(junction
+
+		(at 235 30.48)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "1bb43ef3-0534-4fd4-85ae-0807a713f0e5")
+
+	)
+
+	(junction
+
+		(at 269.72 38.1)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "12280110-14fc-40c7-8fb1-2fb6613b9621")
+
+	)
+
+	(junction
+
+		(at 30.48 267.97)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "4b83274e-a28b-4ec9-a113-3d94ed759e17")
+
+	)
+
+	(junction
+
+		(at 30.48 273.05)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "892bba9a-562e-498c-ac6a-4980c91d776d")
 
 	)
 
@@ -32611,6 +32591,130 @@
 		(color 0 0 0 0)
 
 		(uuid "0ce7c1b4-42d6-4f20-8f8b-6c129a1e54b8")
+
+	)
+
+	(symbol
+
+		(lib_id "power:PWR_FLAG")
+
+		(at 193.8 113.03 0)
+
+		(unit 1)
+
+		(body_style 1)
+
+		(exclude_from_sim no)
+
+		(in_bom no)
+
+		(on_board no)
+
+		(in_pos_files no)
+
+		(dnp no)
+
+		(uuid "1cf1e516-6c90-498d-b0a1-29c8e7fb2fe8")
+
+		(property "Reference" "#FLG_RS485_33V_ISO"
+
+			(at 193.8 110.49 0)
+
+			(hide yes)
+
+			(show_name no)
+
+			(do_not_autoplace no)
+
+			(effects (font (size 1 1)))
+
+		)
+
+		(property "Value" "PWR_FLAG"
+
+			(at 193.8 115.57 0)
+
+			(hide yes)
+
+			(show_name no)
+
+			(do_not_autoplace no)
+
+			(effects (font (size 1 1)))
+
+		)
+
+		(property "Footprint" "" (at 193.8 113.03 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(property "Datasheet" "" (at 193.8 113.03 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(property "Description" "" (at 193.8 113.03 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(pin "1" (uuid "89cae60a-86f0-4cda-8eb8-f3f64e8735d0"))
+
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#FLG_RS485_33V_ISO") (unit 1))))
+
+	)
+
+	(symbol
+
+		(lib_id "power:PWR_FLAG")
+
+		(at 193.8 120.65 0)
+
+		(unit 1)
+
+		(body_style 1)
+
+		(exclude_from_sim no)
+
+		(in_bom no)
+
+		(on_board no)
+
+		(in_pos_files no)
+
+		(dnp no)
+
+		(uuid "04c4660b-3640-45c8-bec7-ec6153d1ec4d")
+
+		(property "Reference" "#FLG_RS485_GND"
+
+			(at 193.8 118.11 0)
+
+			(hide yes)
+
+			(show_name no)
+
+			(do_not_autoplace no)
+
+			(effects (font (size 1 1)))
+
+		)
+
+		(property "Value" "PWR_FLAG"
+
+			(at 193.8 123.19 0)
+
+			(hide yes)
+
+			(show_name no)
+
+			(do_not_autoplace no)
+
+			(effects (font (size 1 1)))
+
+		)
+
+		(property "Footprint" "" (at 193.8 120.65 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(property "Datasheet" "" (at 193.8 120.65 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(property "Description" "" (at 193.8 120.65 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+
+		(pin "1" (uuid "22108d4f-459f-4a57-bcd3-0818cb43e77b"))
+
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#FLG_RS485_GND") (unit 1))))
 
 	)
 

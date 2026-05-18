@@ -15,7 +15,9 @@
 - `docs/schematic-review/metering_core/METERING_CORE_color_review.pdf`
 - `docs/schematic-review/metering_core/METERING_CORE_color_review_full_hi.png`
 - `docs/schematic-review/metering_core/METERING_CORE_color_review_*.png`
+- `docs/schematic-review/metering_core/METERING_CORE_erc_after_visual_fix.rpt`
 - `docs/schematic-review/metering_core/visual-clearance-audit.md`
+- `docs/schematic-review/metering_core/visual-clearance-audit-results.md`
 - `docs/schematic-review/metering_core/README.md`
 - `docs/automation/schematic-style-guide.md`
 
@@ -28,6 +30,9 @@
 - Confirm that inter-island signals remain net-label based.
 - Check whether the schematic source still contains visual or reviewability
   issues that Codex should fix in a narrow follow-up commit.
+- Confirm that KiCad ERC reports zero `; error` entries. Treat remaining
+  warning-only items as follow-up candidates only if they are concrete and
+  narrow enough for this review snapshot, not broad PCB-release cleanup.
 - Specifically inspect the current visual clearance failure classes:
   - MCU bottom/top vertical power-pin text drawn inside the chip body.
   - `+3.3V`, DGND, or GNDA text overlapping pin names, pin numbers, or rails.

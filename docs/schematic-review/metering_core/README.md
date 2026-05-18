@@ -49,9 +49,15 @@ The main rule change being reviewed is:
 
 ## Current Intent
 
-This snapshot does not claim the schematic is final for PCB release. It is a
-reviewable checkpoint so Gemini can flag style, connectivity, and documentation
-issues before the next Codex implementation pass.
+This PR intentionally changes the repository-local KiCad schematic snapshot and
+its generated preview artifacts. The snapshot is not claiming final PCB-release
+status yet; it is a reviewable checkpoint so Gemini can flag style,
+connectivity, and documentation issues before the next Codex implementation
+pass.
+
+The latest ERC report has **zero errors**. Remaining ERC items are warnings tied
+to review-snapshot grid/library/placeholder-symbol cleanup and are documented in
+`visual-clearance-audit-results.md`.
 
 ## Generated Outputs
 

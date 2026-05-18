@@ -48,6 +48,21 @@ the color schematic preview.
 
 ## ERC Note
 
-KiCad ERC still reports violations after this visual cleanup pass. This pass was
-limited to schematic readability and did not claim electrical-release closure.
-The ERC report should be triaged separately before PCB artwork release.
+The follow-up ERC cleanup pass reduced KiCad ERC **errors to zero** in
+`METERING_CORE_erc_after_visual_fix.rpt`.
+
+Residual ERC items are warnings only:
+
+- `endpoint_off_grid`: inherited review-snapshot coordinates that should be
+  normalized during the PCB-ready grid cleanup pass.
+- `lib_symbol_mismatch` / `lib_symbol_issues`: expected while this repo-local
+  review snapshot embeds or references project-local `SmartLoad` symbols without
+  installing the full local KiCad library table in CI.
+- `isolated_pin_label`: expected for island-style review stubs where some nets
+  intentionally terminate at labels for later block integration.
+- `footprint_link_issues`: expected for placeholder review symbols whose final
+  footprints are still part of the PCB/artwork preparation step.
+- `unconnected_wire_endpoint`: remaining review-snapshot custom-symbol endpoint
+  warnings around DC input and latching-relay island stubs; these are warnings,
+  not ERC errors, and should be handled with the broader symbol/footprint
+  normalization pass rather than this visual-clearance patch.
