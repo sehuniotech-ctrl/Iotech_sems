@@ -12142,13 +12142,13 @@
 
 				(pin power_in line (at 0 22.86 270) (length 2.54) (name "DGND" (effects (font (size 1 1)))) (number "GND" (effects (font (size 1 1)))))
 
-				(pin passive line (at 20.32 -7.62 180) (length 2.54) (name "PLC_TX_P" (effects (font (size 1 1)))) (number "J13_3" (effects (font (size 1 1)))))
+				(pin passive line (at 20.32 -7.62 180) (length 2.54) (name "PLC_TX_P" (effects (font (size 0.01 0.01)))) (number "J13_3" (effects (font (size 1 1)))))
 
-				(pin passive line (at 20.32 -2.54 180) (length 2.54) (name "PLC_TX_N" (effects (font (size 1 1)))) (number "J13_4" (effects (font (size 1 1)))))
+				(pin passive line (at 20.32 -2.54 180) (length 2.54) (name "PLC_TX_N" (effects (font (size 0.01 0.01)))) (number "J13_4" (effects (font (size 1 1)))))
 
-				(pin passive line (at 20.32 2.54 180) (length 2.54) (name "PLC_RX_P" (effects (font (size 1 1)))) (number "J13_6" (effects (font (size 1 1)))))
+				(pin passive line (at 20.32 2.54 180) (length 2.54) (name "PLC_RX_P" (effects (font (size 0.01 0.01)))) (number "J13_6" (effects (font (size 1 1)))))
 
-				(pin passive line (at 20.32 7.62 180) (length 2.54) (name "PLC_RX_N" (effects (font (size 1 1)))) (number "J13_7" (effects (font (size 1 1)))))
+				(pin passive line (at 20.32 7.62 180) (length 2.54) (name "PLC_RX_N" (effects (font (size 0.01 0.01)))) (number "J13_7" (effects (font (size 1 1)))))
 
 			)
 
@@ -13268,7 +13268,7 @@
 
 		(pts
 
-			(xy 330 198.26) (xy 330 193.18)
+			(xy 330 198.26) (xy 330 203.34)
 
 		)
 
@@ -13588,7 +13588,7 @@
 
 		(pts
 
-			(xy 167.64 113.03) (xy 161.8 113.03)
+			(xy 167.64 113.03) (xy 156.5 113.03)
 
 		)
 
@@ -13948,7 +13948,7 @@
 
 		(pts
 
-			(xy 167.64 120.65) (xy 161.8 120.65)
+			(xy 167.64 120.65) (xy 156.5 120.65)
 
 		)
 
@@ -14208,7 +14208,7 @@
 
 		(pts
 
-			(xy 332.54 198.26) (xy 332.54 193.18)
+			(xy 332.54 198.26) (xy 332.54 203.34)
 
 		)
 
@@ -15590,7 +15590,7 @@
 
 		(pts
 
-			(xy 102.87 267.97) (xy 139.7 267.97)
+			(xy 102.87 267.97) (xy 145 267.97)
 
 		)
 
@@ -15932,7 +15932,7 @@
 
 	(label "DGND"
 
-		(at 330 193.18 90)
+		(at 330 203.34 90)
 
 		(effects
 
@@ -15990,7 +15990,7 @@
 
 	(label "DGND"
 
-		(at 161.8 120.65 180)
+		(at 156.5 120.65 180)
 
 		(effects
 
@@ -16499,7 +16499,7 @@
 
 	(label "DGND"
 
-		(at 330 193.18 90)
+		(at 330 203.34 90)
 
 		(effects
 
@@ -16577,7 +16577,7 @@
 
 	(label "DGND"
 
-		(at 330 193.18 90)
+		(at 330 203.34 90)
 
 		(effects
 
@@ -16861,7 +16861,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 330 96.66 0)
+		(at 324.92 96.66 0)
 
 		(unit 1)
 
@@ -16881,7 +16881,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_003"
 
-			(at 332.54 92.85 0)
+			(at 327.46 92.85 0)
 
 			(hide yes)
 
@@ -16895,7 +16895,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 332.54 97.168 0)
+			(at 318.5 92.5 0)
 
 			(show_name no)
 
@@ -16907,7 +16907,7 @@
 
 		(property "Footprint" ""
 
-			(at 330 96.66 0)
+			(at 324.92 96.66 0)
 
 			(show_name no)
 
@@ -16919,7 +16919,7 @@
 
 		(property "Datasheet" ""
 
-			(at 330 96.66 0)
+			(at 324.92 96.66 0)
 
 			(show_name no)
 
@@ -16931,7 +16931,7 @@
 
 		(property "Description" ""
 
-			(at 330 96.66 0)
+			(at 324.92 96.66 0)
 
 			(show_name no)
 
@@ -17330,7 +17330,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 161.8 113.03 0)
+		(at 156.5 113.03 0)
 
 		(unit 1)
 
@@ -17350,7 +17350,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_006"
 
-			(at 164.34 109.22 0)
+			(at 159.04 109.22 0)
 
 			(hide yes)
 
@@ -17364,7 +17364,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 164.34 113.538 0)
+			(at 152.5 110.5 0)
 
 			(show_name no)
 
@@ -17376,7 +17376,7 @@
 
 		(property "Footprint" ""
 
-			(at 161.8 113.03 0)
+			(at 156.5 113.03 0)
 
 			(show_name no)
 
@@ -17388,7 +17388,7 @@
 
 		(property "Datasheet" ""
 
-			(at 161.8 113.03 0)
+			(at 156.5 113.03 0)
 
 			(show_name no)
 
@@ -17400,7 +17400,7 @@
 
 		(property "Description" ""
 
-			(at 161.8 113.03 0)
+			(at 156.5 113.03 0)
 
 			(show_name no)
 
@@ -17804,7 +17804,7 @@
 
 	(label "GNDA"
 
-		(at 332.54 193.18 90)
+		(at 332.54 203.34 90)
 
 		(effects
 
@@ -18022,7 +18022,7 @@
 
 	(label "DGND"
 
-		(at 330 193.18 90)
+		(at 330 203.34 90)
 
 		(effects
 
@@ -18302,7 +18302,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 139.7 267.97 0)
+		(at 145 267.97 0)
 
 		(unit 1)
 
@@ -18322,7 +18322,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_010"
 
-			(at 142.24 264.16 0)
+			(at 147.54 264.16 0)
 
 			(hide yes)
 
@@ -18336,7 +18336,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 142.24 268.478 0)
+			(at 146.5 263.8 0)
 
 			(show_name no)
 
@@ -18348,7 +18348,7 @@
 
 		(property "Footprint" ""
 
-			(at 139.7 267.97 0)
+			(at 145 267.97 0)
 
 			(show_name no)
 
@@ -18360,7 +18360,7 @@
 
 		(property "Datasheet" ""
 
-			(at 139.7 267.97 0)
+			(at 145 267.97 0)
 
 			(show_name no)
 
@@ -18372,7 +18372,7 @@
 
 		(property "Description" ""
 
-			(at 139.7 267.97 0)
+			(at 145 267.97 0)
 
 			(show_name no)
 
@@ -20854,7 +20854,7 @@
 
 		(property "Reference" "C_PWR_OUT1"
 
-			(at 120.65 269.24 0)
+			(at 113.5 264.6 0)
 
 			(show_name no)
 
@@ -30774,7 +30774,7 @@
 
 		(property "Reference" "C_PWR_OUT2"
 
-			(at 133.35 269.24 0)
+			(at 126.2 264.6 0)
 
 			(show_name no)
 
@@ -33168,17 +33168,17 @@
 
 
 
-	(text "MCU_PLC SPI header"
+	(text "PLC SPI"
 
 		(exclude_from_sim no)
 
-		(at 336 35 0)
+		(at 372 51 0)
 
 		(effects
 
 			(font
 
-				(size 0.9 0.9)
+				(size 0.01 0.01)
 
 				(bold yes)
 
@@ -33198,7 +33198,7 @@
 
 		(lib_id "SmartLoad:PLC_SPI_6PIN_HEADER")
 
-		(at 390.00 22.00 0)
+		(at 390.00 40.00 0)
 
 		(unit 1)
 
@@ -33216,15 +33216,15 @@
 
 		(uuid "a099ca8d-e2f2-4642-b650-b60aff2db024")
 
-		(property "Reference" "J_PLC_SPI" (at 382.38 11.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Reference" "J_PLC_SPI" (at 382.38 29.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Value" "PLC_SPI_HEADER" (at 382.38 32.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Value" "PLC_SPI_HEADER" (at 382.38 50.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (at 390.00 22.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (at 390.00 40.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Datasheet" "" (at 390.00 22.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Datasheet" "" (at 390.00 40.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Description" "MCU-to-PLC SPI header only: MCU_PLC_CS/SCK/MISO/MOSI are separate PA4-PA7 nets; no DCU UART or METER SPI nets here" (at 390.00 22.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Description" "MCU-to-PLC SPI header only: MCU_PLC_CS/SCK/MISO/MOSI are separate PA4-PA7 nets; no DCU UART or METER SPI nets here" (at 390.00 40.00 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 		(pin "1" (uuid "08cf7a14-4129-4c18-a356-975f70bf6cd1"))
 
@@ -33262,7 +33262,7 @@
 
 		(pts
 
-			(xy 360 15.65) (xy 379.84 15.65)
+			(xy 360 33.65) (xy 379.84 33.65)
 
 		)
 
@@ -33280,13 +33280,13 @@
 
 	(label "+3.3V"
 
-		(at 360 15.65 180)
+		(at 360 33.65 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -33304,7 +33304,7 @@
 
 		(pts
 
-			(xy 360 18.19) (xy 379.84 18.19)
+			(xy 360 36.19) (xy 379.84 36.19)
 
 		)
 
@@ -33322,13 +33322,13 @@
 
 	(label "DGND"
 
-		(at 360 18.19 180)
+		(at 360 36.19 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -33346,7 +33346,7 @@
 
 		(pts
 
-			(xy 360 20.73) (xy 379.84 20.73)
+			(xy 360 38.73) (xy 379.84 38.73)
 
 		)
 
@@ -33364,13 +33364,13 @@
 
 	(label "MCU_PLC_CS"
 
-		(at 360 20.73 180)
+		(at 360 38.73 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -33388,7 +33388,7 @@
 
 		(pts
 
-			(xy 360 23.27) (xy 379.84 23.27)
+			(xy 360 41.27) (xy 379.84 41.27)
 
 		)
 
@@ -33406,13 +33406,13 @@
 
 	(label "MCU_PLC_SCK"
 
-		(at 360 23.27 180)
+		(at 360 41.27 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -33430,7 +33430,7 @@
 
 		(pts
 
-			(xy 360 25.81) (xy 379.84 25.81)
+			(xy 360 43.81) (xy 379.84 43.81)
 
 		)
 
@@ -33448,13 +33448,13 @@
 
 	(label "MCU_PLC_MISO"
 
-		(at 360 25.81 180)
+		(at 360 43.81 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 
@@ -33472,7 +33472,7 @@
 
 		(pts
 
-			(xy 360 28.35) (xy 379.84 28.35)
+			(xy 360 46.35) (xy 379.84 46.35)
 
 		)
 
@@ -33490,13 +33490,13 @@
 
 	(label "MCU_PLC_MOSI"
 
-		(at 360 28.35 180)
+		(at 360 46.35 180)
 
 		(effects
 
 			(font
 
-				(size 1.27 1.27)
+				(size 0.9 0.9)
 
 			)
 

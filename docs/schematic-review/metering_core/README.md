@@ -25,6 +25,8 @@ preview artifacts from a GitHub PR.
 - `visual-clearance-audit.md`
   - Explicit checklist for MCU power-pin text, PLC/module label boundaries,
     power/ground port piercing, frame clearance, and similar visual failures.
+- `visual-clearance-audit-results.md`
+  - Records the six visual hotspot fixes and the updated color preview files.
 - `junction_audit.md`
   - Coordinate-based audit of schematic junction objects.
   - Records whether any true 4-way junctions exist in the schematic source.
@@ -61,6 +63,7 @@ artifacts:
 - Color PDF export: `METERING_CORE_color_review.pdf`
 - Color PNG crops: `METERING_CORE_color_review_*.png`
 - Visual clearance audit: `visual-clearance-audit.md`
+- Visual cleanup result: `visual-clearance-audit-results.md`
 
 These files are included so reviewers can compare the KiCad source with a human
 readable preview.
