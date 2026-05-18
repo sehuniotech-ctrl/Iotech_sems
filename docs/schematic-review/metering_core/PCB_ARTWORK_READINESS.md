@@ -25,10 +25,10 @@ review snapshot to PCB artwork.
 KiCad ERC was run after the visual cleanup pass:
 
 - Report: `METERING_CORE_erc_after_visual_fix.rpt`
-- Result: 348 violations.
+- Result: 0 errors, 340 warnings.
 
-The current ERC issues must be triaged before release artwork. The first visible
-classes are:
+The remaining ERC warnings must be triaged before release artwork. The first
+visible classes are:
 
 - Unconnected sensing pins and labels around `VP` / `VN`.
 - Power pins not driven on isolated interface and MCU ground pins.
