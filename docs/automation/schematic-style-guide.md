@@ -152,6 +152,40 @@ rubric when reviewing schematic-related changes.
    - Relay coil wires should leave the relay pin orthogonally, then turn in an
      uncluttered lane. Do not cross through `RELAY_ON_CTRL`, `RELAY_OFF_CTRL`,
      flyback diode labels, or transistor bodies.
+   - Latching relay common coil pins such as `COIL_COM` must use the shortest
+     readable route to their supply rail, normally `+12V`. Do not preserve an
+     old wire path if it creates a loop, detour, or route that goes down and
+     then back up through another driver lane.
+   - If a relay pin naturally exits downward, route it downward first and place
+     the power or ground port at the wire endpoint. Do not bend the wire around
+     unrelated blocks just to reuse an existing rail.
+   - When a previous schematic edit leaves a connected-but-ugly detour, prefer
+     deleting and redrawing that local wire segment over extending the detour.
+     Electrical connectivity alone is not sufficient; the visual path must also
+     communicate the circuit intent.
+   - Do not freeze component locations so strongly that a local relay-driver
+     wire must jog around empty space. For ON/OFF latching relay drivers, it is
+     acceptable and preferred to move the related local driver parts as a group
+     so the transistor collector, flyback diode, and relay coil pin share a
+     straight horizontal lane.
+   - Hide or move package-only diode pin text such as `A` / `K` when it lands on
+     the flyback common rail. The diode orientation must remain clear from the
+     symbol graphic and value text; duplicated `K K` or `A A` rail text is a
+     visual defect.
+   - Flyback diode graphics must not leave a stray vertical pin/stub protruding
+     above or below a horizontal relay rail. If the symbol pin stroke creates a
+     useless-looking stub, redesign the local diode symbol/pin length so the
+     visible diode body terminates cleanly at the rail endpoint.
+
+17. Power-port text clearance
+   - Power-port text such as `+3.3V`, `+5V`, and `+12V` must not overlap IC
+     body text, package notes, pin numbers, pin names, or title notes.
+   - If a power port is close to an IC edge, move the power text outward/upward
+     and move nearby notes away. Do not allow voltage text to sit on top of
+     `LQFP64`, `VDD`, `VDDA`, `VSS`, or similar pin/package text.
+   - A visual review or Gemini review must reject any new schematic change that
+     leaves voltage text partially covering another label, even when the net is
+     electrically correct.
 
 ## Smart Load Specific Checks
 

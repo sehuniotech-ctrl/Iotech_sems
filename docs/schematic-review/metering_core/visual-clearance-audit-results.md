@@ -7,6 +7,20 @@ the color schematic preview.
 
 Latest follow-up pass:
 
+0. Latching relay direct routing refinement
+   - Removed the old `COIL_COM` detour and terminated `K_RLY1` pin 2 at a short
+     local `+12V` power port.
+   - Removed the duplicate old `+12V` power port from the flyback-diode common
+     rail and tied that rail into the same `COIL_COM` `+12V` node with a wire.
+   - Moved the OFF driver local parts as a group so the collector, flyback
+     diode, and OFF coil pin now share one straight horizontal lane.
+   - Hid package-only flyback diode `A` / `K` pin text that previously looked
+     like duplicated `K K` labels on the common rail.
+   - Shortened the MCU island title and raised the top `+3.3V` text so it no
+     longer collides with `LQFP64`/VDD pin text.
+   - Check images: `METERING_CORE_color_review_relay_stub_fix.png`,
+     `METERING_CORE_color_review_mcu_3v3_text_fix.png`.
+
 1. MCU bottom ground ports
    - Removed the U-shaped DGND/GNDA side-label bundle at the bottom of `U_MCU`.
    - Each bottom ground-related pin now drops vertically to a downward ground

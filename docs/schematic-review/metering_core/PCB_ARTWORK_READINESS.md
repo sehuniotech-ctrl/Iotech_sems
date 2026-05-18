@@ -18,6 +18,9 @@ review snapshot to PCB artwork.
 - Spread the visible lower MCU power pins to reduce text overlap.
 - Moved `DC12V_IN` / `DC12V_GND` labels inside the schematic frame.
 - Shortened the PLC SPI header note to prevent frame overflow and wire overlap.
+- Simplified the latching relay `COIL_COM` path to a short local `+12V` power
+  port connection, removed the duplicate old `+12V` marker near the flyback
+  diodes, and added a direct OFF-coil driver wire.
 - Exported color PDF and PNG crops for visual inspection.
 
 ## PCB Blocking Items
@@ -25,7 +28,7 @@ review snapshot to PCB artwork.
 KiCad ERC was run after the visual cleanup pass:
 
 - Report: `METERING_CORE_erc_after_visual_fix.rpt`
-- Result: 0 errors, 340 warnings.
+- Result: 0 errors, 336 warnings.
 
 The remaining ERC warnings must be triaged before release artwork. The first
 visible classes are:

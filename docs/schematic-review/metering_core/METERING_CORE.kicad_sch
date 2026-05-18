@@ -8836,6 +8836,14 @@
 
 				(offset 0.8)
 
+				(hide yes)
+
+			)
+
+			(pin_numbers
+
+				(hide yes)
+
 			)
 
 			(exclude_from_sim no)
@@ -8960,7 +8968,7 @@
 
 					(pts
 
-						(xy -2.54 1.27) (xy 2.54 1.27)
+						(xy -2.54 5.08) (xy 2.54 5.08)
 
 					)
 
@@ -8984,7 +8992,7 @@
 
 					(pts
 
-						(xy 0 1.27) (xy -2.54 -2.54) (xy 2.54 -2.54) (xy 0 1.27)
+						(xy 0 5.08) (xy -2.54 -5.08) (xy 2.54 -5.08) (xy 0 5.08)
 
 					)
 
@@ -9012,7 +9020,7 @@
 
 					(at 0 -5.08 90)
 
-					(length 2.54)
+					(length 0)
 
 					(name "A"
 
@@ -9023,6 +9031,8 @@
 								(size 1 1)
 
 							)
+
+							(hide yes)
 
 						)
 
@@ -9038,6 +9048,8 @@
 
 							)
 
+							(hide yes)
+
 						)
 
 					)
@@ -9048,7 +9060,7 @@
 
 					(at 0 5.08 270)
 
-					(length 2.54)
+					(length 0)
 
 					(name "K"
 
@@ -9059,6 +9071,8 @@
 								(size 1 1)
 
 							)
+
+							(hide yes)
 
 						)
 
@@ -9073,6 +9087,8 @@
 								(size 1 1)
 
 							)
+
+							(hide yes)
 
 						)
 
@@ -12410,17 +12426,17 @@
 
 	)
 
-	(text "Main MCU Island - STM32L053R8T6 LQFP64, Source7 pin map, short stubs only"
+	(text "Main MCU Island - STM32L053R8T6"
 
 		(exclude_from_sim no)
 
-		(at 286 92 0)
+		(at 286 86 0)
 
 		(effects
 
 			(font
 
-				(size 1.1 1.1)
+				(size 0.9 0.9)
 
 			)
 
@@ -13833,6 +13849,91 @@
 		)
 
 		(uuid "31200541-f012-4922-9c26-ba6b91d5214d")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 279.88 38.1) (xy 279.88 58.42)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "cc3f8ff0-7f96-4c67-8c5c-82cebf9a7f42")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 284.96 58.42) (xy 279.88 58.42)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "5328ac40-ce5d-4014-ab7c-6efe8e42c4a9")
+
+	)
+
+	(symbol
+
+		(lib_id "power:+12V")
+
+		(at 279.88 58.42 0)
+
+		(unit 1)
+
+		(body_style 1)
+
+		(exclude_from_sim no)
+
+		(in_bom yes)
+
+		(on_board yes)
+
+		(in_pos_files yes)
+
+		(dnp no)
+
+		(uuid "cac65750-8eff-4146-8498-aa51893b27c5")
+
+		(property "Reference" "#PWR_RLY_COIL_COM_12V"
+			(at 282.42 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+
+		(property "Value" "+12V"
+			(at 276.4 55.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify right))
+		)
+
+		(property "Footprint" "" (at 279.88 58.42 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 279.88 58.42 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 279.88 58.42 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "f8102d50-32ad-427b-a32b-20be8fd8b1eb"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_RLY_COIL_COM_12V") (unit 1))))
 
 	)
 
@@ -16318,110 +16419,6 @@
 
 	)
 
-	(symbol
-
-		(lib_id "power:+12V")
-
-		(at 269.72 38.1 0)
-
-		(unit 1)
-
-		(body_style 1)
-
-		(exclude_from_sim no)
-
-		(in_bom yes)
-
-		(on_board yes)
-
-		(in_pos_files yes)
-
-		(dnp no)
-
-		(uuid "14881d10-580d-41fa-b33d-225878d4920d")
-
-		(property "Reference" "#PWR_AUTO_12V_002"
-
-			(at 272.26 34.29 0)
-
-			(hide yes)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Value" "+12V"
-
-			(at 263.0 34.8 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)) (justify left))
-
-		)
-
-		(property "Footprint" ""
-
-			(at 299.72 38.1 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Datasheet" ""
-
-			(at 299.72 38.1 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(property "Description" ""
-
-			(at 299.72 38.1 0)
-
-			(show_name no)
-
-			(do_not_autoplace no)
-
-			(effects (font (size 1.27 1.27)))
-
-		)
-
-		(pin "1" (uuid "c442627b-9d43-497b-8b02-210d7d78f6fa"))
-
-		(instances
-
-			(project "METERING_CORE"
-
-				(path "/e4236fbb-ccab-4d10-bcea-7fda722d6751"
-
-					(reference "#PWR_AUTO_12V_002")
-
-					(unit 1)
-
-				)
-
-			)
-
-		)
-
-	)
-
 	(label "+3.3V_ISO"
 
 		(at 250 94.68 0)
@@ -16820,7 +16817,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 318.5 92.5 0)
+			(at 318.5 89.5 0)
 
 			(show_name no)
 
@@ -31641,7 +31638,7 @@
 
 	(label "RELAY_OFF_CTRL"
 
-		(at 190 38.1 180)
+		(at 190 35.56 180)
 
 		(effects
 
@@ -31663,7 +31660,7 @@
 
 		(pts
 
-			(xy 190 38.1) (xy 204.52 38.1)
+			(xy 190 35.56) (xy 204.52 35.56)
 
 		)
 
@@ -31683,7 +31680,7 @@
 
 		(lib_id "SmartLoad:R_Horizontal_Island")
 
-		(at 209.6 38.1 0)
+		(at 209.6 35.56 0)
 
 		(unit 1)
 
@@ -31701,15 +31698,15 @@
 
 		(uuid "e38bb7ff-608d-4785-a71f-960605d3216b")
 
-		(property "Reference" "R_RLY_OFF_BASE" (at 205.79 34.29 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Reference" "R_RLY_OFF_BASE" (at 205.79 31.75 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Value" "1k" (at 205.79 41.91 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Value" "1k" (at 205.79 39.37 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 239.6 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 239.6 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Datasheet" "" (at 239.6 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Datasheet" "" (at 239.6 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Description" "Relay coil driver base resistor" (at 239.6 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Description" "Relay coil driver base resistor" (at 239.6 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 		(pin "1" (uuid "601a2540-a712-4858-8f21-b2544ffeaeb5"))
 
@@ -31723,7 +31720,7 @@
 
 		(pts
 
-			(xy 214.68 38.1) (xy 227.38 38.1)
+			(xy 214.68 35.56) (xy 227.38 35.56)
 
 		)
 
@@ -31743,7 +31740,7 @@
 
 		(lib_id "SmartLoad:NPN_BCE_Island")
 
-		(at 235 38.1 0)
+		(at 235 35.56 0)
 
 		(unit 1)
 
@@ -31761,15 +31758,15 @@
 
 		(uuid "db7355ea-38f7-4a31-bb17-54ff42339db6")
 
-		(property "Reference" "Q_RLY_OFF" (at 239.06 34.29 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Reference" "Q_RLY_OFF" (at 239.06 31.75 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Value" "2N3904" (at 239.06 41.91 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
+		(property "Value" "2N3904" (at 239.06 39.37 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (justify left)))
 
-		(property "Footprint" "SmartLoad:TO92_BCE_Review" (at 265 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Footprint" "SmartLoad:TO92_BCE_Review" (at 265 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Datasheet" "" (at 265 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Datasheet" "" (at 265 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Description" "NPN transistor low-side latching relay coil driver" (at 265 38.1 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Description" "NPN transistor low-side latching relay coil driver" (at 265 35.56 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 		(pin "B" (uuid "9c6ca548-e3d6-44be-8186-5eaf3dc754b3"))
 
@@ -31785,7 +31782,7 @@
 
 		(pts
 
-			(xy 235 45.72) (xy 235 50.8)
+			(xy 235 43.18) (xy 235 48.26)
 
 		)
 
@@ -31805,7 +31802,7 @@
 
 		(lib_id "power:DGND")
 
-		(at 235 50.8 0)
+		(at 235 48.26 0)
 
 		(unit 1)
 
@@ -31825,7 +31822,7 @@
 
 		(property "Reference" "#PWR_RLY_OFF_Q_GND"
 
-			(at 237.54 46.99 0)
+			(at 237.54 44.45 0)
 
 			(hide yes)
 
@@ -31839,7 +31836,7 @@
 
 		(property "Value" "DGND"
 
-			(at 237.54 51.31 0)
+			(at 237.54 48.77 0)
 
 			(show_name no)
 
@@ -31849,11 +31846,11 @@
 
 		)
 
-		(property "Footprint" "" (at 235 50.8 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 235 48.26 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-		(property "Datasheet" "" (at 235 50.8 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 235 48.26 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-		(property "Description" "" (at 235 50.8 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 235 48.26 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
 		(pin "1" (uuid "7e202bbf-8d21-413c-9fcc-5f88d6257078"))
 
@@ -31879,7 +31876,7 @@
 
 		(pts
 
-			(xy 235 30.48) (xy 247.7 30.48)
+			(xy 235 27.94) (xy 269.72 27.94)
 
 		)
 
@@ -31897,7 +31894,7 @@
 
 	(label "RLY_OFF_COIL_DRV"
 
-		(at 235 30.48 180)
+		(at 235 27.94 180)
 
 		(effects
 
@@ -32125,7 +32122,7 @@
 
 	(junction
 
-		(at 220.98 48.26)
+		(at 220.98 45.72)
 
 		(diameter 0)
 
@@ -32137,7 +32134,7 @@
 
 	(junction
 
-		(at 220.98 38.1)
+		(at 220.98 35.56)
 
 		(diameter 0)
 
@@ -32149,7 +32146,7 @@
 
 	(junction
 
-		(at 235 30.48)
+		(at 235 27.94)
 
 		(diameter 0)
 
@@ -32168,6 +32165,30 @@
 		(color 0 0 0 0)
 
 		(uuid "12280110-14fc-40c7-8fb1-2fb6613b9621")
+
+	)
+
+	(junction
+
+		(at 279.88 38.1)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "86b2ad21-7b25-4d2d-95b9-0ce2a87d7553")
+
+	)
+
+	(junction
+
+		(at 279.88 58.42)
+
+		(diameter 0)
+
+		(color 0 0 0 0)
+
+		(uuid "99b4f3a7-5200-4e86-a68c-cdfb6aec2e42")
 
 	)
 
@@ -32199,7 +32220,7 @@
 
 		(lib_id "Device:R")
 
-		(at 220.98 41.91 0)
+		(at 220.98 39.37 0)
 
 		(unit 1)
 
@@ -32219,31 +32240,31 @@
 
 		(property "Reference" "R_RLY_OFF_PD"
 
-			(at 223.52 40.64 0)
+			(at 217.0 40.64 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1 1)) (justify left))
+			(effects (font (size 1 1)) (justify right))
 
 		)
 
 		(property "Value" "100k"
 
-			(at 223.52 43.18 0)
+			(at 217.0 43.18 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1 1)) (justify left))
+			(effects (font (size 1 1)) (justify right))
 
 		)
 
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 
-			(at 220.98 41.91 0)
+			(at 220.98 39.37 0)
 
 			(hide yes)
 
@@ -32257,7 +32278,7 @@
 
 		(property "Datasheet" ""
 
-			(at 220.98 41.91 0)
+			(at 220.98 39.37 0)
 
 			(hide yes)
 
@@ -32271,7 +32292,7 @@
 
 		(property "Description" "Base-emitter pulldown for OFF relay driver"
 
-			(at 220.98 41.91 0)
+			(at 220.98 39.37 0)
 
 			(hide yes)
 
@@ -32309,7 +32330,7 @@
 
 		(lib_id "power:DGND")
 
-		(at 220.98 45.72 0)
+		(at 220.98 43.18 0)
 
 		(unit 1)
 
@@ -32329,7 +32350,7 @@
 
 		(property "Reference" "#PWR_RLY_OFF_PD_GND"
 
-			(at 223.52 41.91 0)
+			(at 223.52 39.37 0)
 
 			(hide yes)
 
@@ -32343,7 +32364,7 @@
 
 		(property "Value" "DGND"
 
-			(at 223.52 46.23 0)
+			(at 223.52 43.69 0)
 
 			(show_name no)
 
@@ -32353,11 +32374,11 @@
 
 		)
 
-		(property "Footprint" "" (at 220.98 45.72 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 220.98 43.18 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-		(property "Datasheet" "" (at 220.98 45.72 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 220.98 43.18 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-		(property "Description" "" (at 220.98 45.72 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 220.98 43.18 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
 		(pin "1" (uuid "73e08342-68d4-4b9a-aad2-acd3d04b8256"))
 
@@ -32396,126 +32417,6 @@
 		)
 
 		(uuid "b97dc686-e5f7-4d03-ab07-e9139a8e6d47")
-
-	)
-
-	(label "RLY_OFF_COIL_DRV"
-
-		(at 269.72 27.94 180)
-
-		(effects
-
-			(font
-
-				(size 1.27 1.27)
-
-			)
-
-			(justify right)
-
-		)
-
-		(uuid "da3cb1aa-5e60-44e4-ae37-89407f1f8227")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 269.72 38.1) (xy 246.38 38.1)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "81dbb9cc-3c6d-4592-ae9f-bbdb98db8b31")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 246.38 38.1) (xy 246.38 58.42)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "dfe1d022-3260-4d53-9454-1543f409b241")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 284.96 58.42) (xy 284.96 68.58)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "7d045040-b28c-4fde-b40b-bc14869366a7")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 284.96 68.58) (xy 246.38 68.58)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "d58b3766-4afb-44bb-a463-7b072af88f70")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 246.38 68.58) (xy 246.38 58.42)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "b5946954-6b98-484b-b761-45a60e17ac02")
 
 	)
 
