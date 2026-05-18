@@ -1,4 +1,4 @@
-ERC report (2026-05-18T14:22:40, Encoding UTF8)
+ERC report (2026-05-18T14:35:04, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -691,10 +691,10 @@ Report includes: Errors, Warnings
     @(312.22 mm, 122.06 mm): Horizontal Wire, length 6.35 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 Hidden pin 1 [+3.3V, Power input, Line]
+    @(324.92 mm, 96.66 mm): Horizontal Wire, length 10.16 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(324.92 mm, 96.66 mm): Horizontal Wire, length 10.16 mm
+    @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 Hidden pin 1 [+3.3V, Power input, Line]
 [lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
     ; warning
     @(324.92 mm, 96.66 mm): Symbol #PWR_AUTO_33V_003 [+3.3V]

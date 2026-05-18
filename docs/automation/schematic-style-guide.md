@@ -176,6 +176,11 @@ rubric when reviewing schematic-related changes.
      above or below a horizontal relay rail. If the symbol pin stroke creates a
      useless-looking stub, redesign the local diode symbol/pin length so the
      visible diode body terminates cleanly at the rail endpoint.
+   - Do not distort a standard diode's graphic geometry to solve a routing or
+     text-clearance problem. The diode bar/triangle proportions must remain
+     recognizable as a normal diode symbol. Fix visual issues by moving the
+     diode, moving labels, hiding package-only pin names, or redrawing local
+     wires, not by stretching the diode body into an X/hourglass shape.
 
 17. Power-port text clearance
    - Power-port text such as `+3.3V`, `+5V`, and `+12V` must not overlap IC

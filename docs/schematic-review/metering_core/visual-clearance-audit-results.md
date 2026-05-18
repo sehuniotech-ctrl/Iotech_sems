@@ -16,9 +16,11 @@ Latest follow-up pass:
      diode, and OFF coil pin now share one straight horizontal lane.
    - Hid package-only flyback diode `A` / `K` pin text that previously looked
      like duplicated `K K` labels on the common rail.
+   - Restored the flyback diode body geometry to a normal diode symbol after a
+     failed stub-removal attempt had distorted it into an hourglass/X shape.
    - Shortened the MCU island title and raised the top `+3.3V` text so it no
      longer collides with `LQFP64`/VDD pin text.
-   - Check images: `METERING_CORE_color_review_relay_stub_fix.png`,
+   - Check images: `METERING_CORE_color_review_relay_diode_restored_zoom.png`,
      `METERING_CORE_color_review_mcu_3v3_text_fix.png`.
 
 1. MCU bottom ground ports
