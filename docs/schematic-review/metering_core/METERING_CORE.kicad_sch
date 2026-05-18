@@ -12326,11 +12326,11 @@
 
 	)
 
-	(text "Latching Relay Drive / Load Switching Island - ON/OFF pulse coils, contacts carry LIVE load line"
+	(text "Latching Relay Drive Island"
 
 		(exclude_from_sim no)
 
-		(at 208.76 20.32 0)
+		(at 127.00 20.32 0)
 
 		(effects
 
@@ -13884,46 +13884,6 @@
 
 		(pts
 
-			(xy 269.72 38.1) (xy 284.96 38.1)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "31200541-f012-4922-9c26-ba6b91d5214d")
-
-	)
-
-	(wire
-
-		(pts
-
-			(xy 279.88 38.1) (xy 279.88 58.42)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "cc3f8ff0-7f96-4c67-8c5c-82cebf9a7f42")
-
-	)
-
-	(wire
-
-		(pts
-
 			(xy 284.96 58.42) (xy 279.88 58.42)
 
 		)
@@ -13982,6 +13942,96 @@
 		(property "Description" "" (at 279.88 58.42 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 		(pin "1" (uuid "f8102d50-32ad-427b-a32b-20be8fd8b1eb"))
 		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_RLY_COIL_COM_12V") (unit 1))))
+
+	)
+
+	(symbol
+
+		(lib_id "power:+12V")
+
+		(at 274.80 17.78 0)
+
+		(unit 1)
+
+		(body_style 1)
+
+		(exclude_from_sim no)
+
+		(in_bom yes)
+
+		(on_board yes)
+
+		(in_pos_files yes)
+
+		(dnp no)
+
+		(uuid "3e46f7e4-2e6a-4701-b4d1-955c6c37e17d")
+
+		(property "Reference" "#PWR_RLY_OFF_FLY_12V"
+			(at 277.34 13.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+
+		(property "Value" "+12V"
+			(at 277.34 18.288 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+
+		(property "Footprint" "" (at 274.80 17.78 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 274.80 17.78 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 274.80 17.78 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "f1f4bd64-52d8-4f0f-bdcb-768e49f31d7c"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_RLY_OFF_FLY_12V") (unit 1))))
+
+	)
+
+	(symbol
+
+		(lib_id "power:+12V")
+
+		(at 274.80 38.10 0)
+
+		(unit 1)
+
+		(body_style 1)
+
+		(exclude_from_sim no)
+
+		(in_bom yes)
+
+		(on_board yes)
+
+		(in_pos_files yes)
+
+		(dnp no)
+
+		(uuid "43b5797a-b935-46e1-b4de-9e710169879d")
+
+		(property "Reference" "#PWR_RLY_ON_FLY_12V"
+			(at 277.34 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+
+		(property "Value" "+12V"
+			(at 277.34 38.608 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+
+		(property "Footprint" "" (at 274.80 38.10 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 274.80 38.10 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Description" "" (at 274.80 38.10 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "4b9d26e3-ee4e-4a5a-9af1-fc1dbd33e908"))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_RLY_ON_FLY_12V") (unit 1))))
 
 	)
 
@@ -27132,7 +27182,7 @@
 
 		(lib_id "SmartLoad:D_Flyback_Island")
 
-		(at 274.8 43.18 0)
+		(at 274.8 43.18 180)
 
 		(unit 1)
 
@@ -32206,30 +32256,6 @@
 
 	(junction
 
-		(at 269.72 38.1)
-
-		(diameter 0)
-
-		(color 0 0 0 0)
-
-		(uuid "12280110-14fc-40c7-8fb1-2fb6613b9621")
-
-	)
-
-	(junction
-
-		(at 279.88 38.1)
-
-		(diameter 0)
-
-		(color 0 0 0 0)
-
-		(uuid "86b2ad21-7b25-4d2d-95b9-0ce2a87d7553")
-
-	)
-
-	(junction
-
 		(at 279.88 58.42)
 
 		(diameter 0)
@@ -32472,7 +32498,7 @@
 
 		(lib_id "SmartLoad:D_Flyback_Island")
 
-		(at 274.80 33.02 180)
+		(at 274.80 22.86 180)
 
 		(unit 1)
 
@@ -32490,15 +32516,15 @@
 
 		(uuid "52525875-386c-4b31-a27b-566b13aec901")
 
-		(property "Reference" "D_RLY_OFF_FLY" (at 258.50 29.00 0) (show_name no) (do_not_autoplace no) (effects (font (size 0.8 0.8)) (justify left)))
+		(property "Reference" "D_RLY_OFF_FLY" (at 258.50 18.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 0.8 0.8)) (justify left)))
 
-		(property "Value" "1N4148" (at 258.50 33.00 0) (show_name no) (do_not_autoplace no) (effects (font (size 0.8 0.8)) (justify left)))
+		(property "Value" "1N4148" (at 258.50 22.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 0.8 0.8)) (justify left)))
 
-		(property "Footprint" "SmartLoad:D_DO35_AK_Review" (at 304.80 33.02 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Footprint" "SmartLoad:D_DO35_AK_Review" (at 304.80 22.86 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Datasheet" "" (at 304.80 33.02 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Datasheet" "" (at 304.80 22.86 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-		(property "Description" "Flyback diode for OFF coil, same orientation as ON coil diode" (at 304.80 33.02 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+		(property "Description" "Flyback diode for OFF coil, cathode to +12V power port and anode to OFF coil driver" (at 304.80 22.86 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 		(pin "K" (uuid "6baf07f3-3675-4188-b82c-e1832e869d01"))
 
@@ -32517,18 +32543,6 @@
 		(color 0 0 0 0)
 
 		(uuid "d31455a7-57dc-4ff9-9f0f-8672c99aa74c")
-
-	)
-
-	(junction
-
-		(at 274.80 38.10)
-
-		(diameter 0)
-
-		(color 0 0 0 0)
-
-		(uuid "9939cae9-dcdf-4f8f-a27b-2ce10f9c2cae")
 
 	)
 

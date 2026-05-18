@@ -156,6 +156,10 @@ rubric when reviewing schematic-related changes.
      readable route to their supply rail, normally `+12V`. Do not preserve an
      old wire path if it creates a loop, detour, or route that goes down and
      then back up through another driver lane.
+   - `COIL_COM` must not be physically routed through, over, or into the
+     flyback diode lane. If the flyback diode cathode also belongs to `+12V`,
+     use a separate `+12V` Power Port at the diode cathode rather than drawing
+     a long shared green wire from `COIL_COM` up to the diode rail.
    - If a relay pin naturally exits downward, route it downward first and place
      the power or ground port at the wire endpoint. Do not bend the wire around
      unrelated blocks just to reuse an existing rail.

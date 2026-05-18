@@ -1,4 +1,4 @@
-ERC report (2026-05-18T14:47:33, Encoding UTF8)
+ERC report (2026-05-18T15:10:13, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -485,9 +485,6 @@ Report includes: Errors, Warnings
 [lib_symbol_mismatch]: 심볼 'C'가 라이브러리 'Device'의 복사본과 일치하지 않음
     ; warning
     @(205.00 mm, 178.81 mm): Symbol C_OSCO [C]
-[endpoint_off_grid]: Symbol pin or wire end off connection grid
-    ; warning
-    @(269.72 mm, 38.10 mm): Horizontal Wire, length 15.24 mm
 [lib_symbol_issues]: 현재 설정에 심볼 라이브러리 'SmartLoad'가 포함되어 있지 않음
     ; warning
     @(225.00 mm, 155.00 mm): Symbol J_UART_CHECK [UART_6PIN_CHECK_HEADER]
@@ -512,27 +509,33 @@ Report includes: Errors, Warnings
 [lib_symbol_issues]: 심볼 MAX3487E를 라이브러리 'Interface_UART'에서 찾을 수 없음
     ; warning
     @(250.00 mm, 115.00 mm): Symbol U5 [MAX3487E]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(274.80 mm, 17.78 mm): Symbol #PWR_RLY_OFF_FLY_12V Pin 1 [Power input, Line]
 [footprint_link_issues]: 현재 구성에 풋프린트 라이브러리 'SmartLoad'이(가) 포함되어 있지 않습니다
     ; warning
-    @(274.80 mm, 33.02 mm): Symbol D_RLY_OFF_FLY [D_Flyback_Island]
+    @(274.80 mm, 22.86 mm): Symbol D_RLY_OFF_FLY [D_Flyback_Island]
 [lib_symbol_issues]: 현재 설정에 심볼 라이브러리 'SmartLoad'가 포함되어 있지 않음
     ; warning
-    @(274.80 mm, 33.02 mm): Symbol D_RLY_OFF_FLY [D_Flyback_Island]
+    @(274.80 mm, 22.86 mm): Symbol D_RLY_OFF_FLY [D_Flyback_Island]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(274.80 mm, 27.94 mm): Symbol D_RLY_OFF_FLY Pin K [K, Passive, Line]
 [lib_symbol_mismatch]: 심볼 'PWR_FLAG'가 라이브러리 'power'의 복사본과 일치하지 않음
     ; warning
     @(69.85 mm, 267.97 mm): Symbol #FLG_PS_12V [PWR_FLAG]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(274.80 mm, 38.10 mm): Symbol D_RLY_OFF_FLY Pin K [K, Passive, Line]
-[endpoint_off_grid]: Symbol pin or wire end off connection grid
-    ; warning
-    @(274.80 mm, 38.10 mm): Symbol D_RLY_ON_FLY Pin K [K, Passive, Line]
+    @(274.80 mm, 38.10 mm): Symbol #PWR_RLY_ON_FLY_12V Pin 1 [Power input, Line]
 [footprint_link_issues]: 현재 구성에 풋프린트 라이브러리 'SmartLoad'이(가) 포함되어 있지 않습니다
     ; warning
     @(274.80 mm, 43.18 mm): Symbol D_RLY_ON_FLY [D_Flyback_Island]
 [lib_symbol_issues]: 현재 설정에 심볼 라이브러리 'SmartLoad'가 포함되어 있지 않음
     ; warning
     @(274.80 mm, 43.18 mm): Symbol D_RLY_ON_FLY [D_Flyback_Island]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(274.80 mm, 48.26 mm): Symbol D_RLY_ON_FLY Pin K [K, Passive, Line]
 [lib_symbol_mismatch]: 심볼 'C'가 라이브러리 'Device'의 복사본과 일치하지 않음
     ; warning
     @(64.77 mm, 271.78 mm): Symbol C_PWR_IN1 [C]
@@ -545,9 +548,6 @@ Report includes: Errors, Warnings
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(170.00 mm, 225.00 mm): Horizontal Wire, length 20.00 mm
-[endpoint_off_grid]: Symbol pin or wire end off connection grid
-    ; warning
-    @(279.88 mm, 38.10 mm): Vertical Wire, length 20.32 mm
 [lib_symbol_mismatch]: 심볼 'C'가 라이브러리 'Device'의 복사본과 일치하지 않음
     ; warning
     @(77.47 mm, 271.78 mm): Symbol C_PWR_IN2 [C]
@@ -575,9 +575,6 @@ Report includes: Errors, Warnings
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(266.00 mm, 107.38 mm): Label 'RS485_A'
-[unconnected_wire_endpoint]: 연결되지 않은 와이어 종단점
-    ; warning
-    @(269.72 mm, 38.10 mm): Horizontal Wire, length 15.24 mm
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(266.00 mm, 112.46 mm): Label 'RS485_B'
@@ -1011,7 +1008,7 @@ Report includes: Errors, Warnings
     ; warning
     @(355.96 mm, 227.62 mm): Symbol #PWR_MCU_G5 [DGND]
 
- ** ERC messages: 336  Errors 0  Warnings 336
+ ** ERC messages: 335  Errors 0  Warnings 335
 
  ** Ignored checks:
     - Global label only appears once in the schematic
