@@ -199,6 +199,30 @@ rubric when reviewing schematic-related changes.
    - A visual review or Gemini review must reject any new schematic change that
      leaves voltage text partially covering another label, even when the net is
      electrically correct.
+   - A Power Port graphic must not float in empty space. If the red V/arrow or
+     ground triangle is not visibly attached to a wire endpoint or a visible
+     pin stub, delete it or redraw the local wire so the port snaps to the
+     endpoint.
+   - A Power Port graphic must never penetrate an IC or module body. If the red
+     V/arrow, ground triangle, or its text lands inside a yellow symbol body,
+     move the port outside the body and connect it with a short orthogonal
+     wire.
+   - Do not place a Power Port directly on the end of a long horizontal wire
+     when it reads like a dangling red V. Route the signal to a local node,
+     draw a short vertical stub, and place the power symbol at that vertical
+     endpoint.
+   - Visible IC power and ground pins should have one clear local port per
+     visible pin. Hidden or auxiliary power pins must not create extra visible
+     ground/power triangles floating between visible pins unless the pin itself
+     is also visible.
+
+18. IC body and note text clearance
+   - No label, reference, value, note, or helper text may start inside an IC,
+     connector, relay, or module body unless it is an intentional pin name or
+     symbol-internal field.
+   - If a long blue note or island title collides with circuitry or the sheet
+     frame, split it into two or three shorter text objects instead of forcing
+     a single long line.
 
 ## Smart Load Specific Checks
 

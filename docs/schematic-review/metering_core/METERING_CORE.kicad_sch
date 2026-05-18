@@ -5620,8 +5620,6 @@
 
 					(length 2.54)
 
-					(hide yes)
-
 					(name "VSS"
 
 						(effects
@@ -6307,8 +6305,6 @@
 					(at 2.54 -48.26 90)
 
 					(length 2.54)
-
-					(hide yes)
 
 					(name "VSS"
 
@@ -12202,9 +12198,9 @@
 
 				(pin passive line (at -20.32 -12.70 0) (length 2.54) (name "RESET_L" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))
 
-				(pin power_in line (at 0 -22.86 90) (length 2.54) (name "DGND" (effects (font (size 1 1)))) (number "GND" (effects (font (size 1 1)))))
+				(pin power_in line (at 0 -22.86 90) (length 2.54) (name "DGND" (effects (font (size 0.01 0.01)))) (number "GND" (effects (font (size 0.01 0.01)))))
 
-				(pin power_in line (at 0 22.86 270) (length 2.54) (name "+3.3V" (effects (font (size 1 1)))) (number "VCC" (effects (font (size 1 1)))))
+				(pin power_in line (at 0 22.86 270) (length 2.54) (name "+3.3V" (effects (font (size 0.01 0.01)))) (number "VCC" (effects (font (size 0.01 0.01)))))
 
 				(pin passive line (at 20.32 -7.62 180) (length 2.54) (name "PLC_TX_P" (effects (font (size 0.01 0.01)))) (number "J13_3" (effects (font (size 1 1)))))
 
@@ -12222,11 +12218,11 @@
 
 )
 
-	(text "MCU Power Island - five 0.1uF caps, >=400mil spacing"
+	(text "MCU Power Island"
 
 		(exclude_from_sim no)
 
-		(at 250 217 0)
+		(at 235 212 0)
 
 		(effects
 
@@ -13284,6 +13280,26 @@
 
 		(pts
 
+			(xy 285 220) (xy 285 217.46)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "7622a0ad-a3cd-45be-993a-b094778c6656")
+
+	)
+
+	(wire
+
+		(pts
+
 			(xy 41.91 130.81) (xy 36.83 130.81)
 
 		)
@@ -13324,6 +13340,26 @@
 
 		(pts
 
+			(xy 324.92 198.26) (xy 324.92 203.34)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "88a4f8d0-6932-4b74-b026-a20a0ca2f1d6")
+
+	)
+
+	(wire
+
+		(pts
+
 			(xy 330 198.26) (xy 330 205.88)
 
 		)
@@ -13344,7 +13380,7 @@
 
 		(pts
 
-			(xy 324.92 198.26) (xy 324.92 203.34)
+			(xy 332.54 198.26) (xy 332.54 203.34)
 
 		)
 
@@ -13356,7 +13392,7 @@
 
 		)
 
-		(uuid "88a4f8d0-6932-4b74-b026-a20a0ca2f1d6")
+		(uuid "5737f503-4731-4a0d-9135-fe020f4bbdbe")
 
 	)
 
@@ -13677,6 +13713,26 @@
 		)
 
 		(uuid "2172f55b-cb83-4304-b25a-aa962815247e")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 156.5 113.03) (xy 156.5 110.49)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "2ef79a5f-0d63-4f40-b4fb-9bf5c701c3c1")
 
 	)
 
@@ -14419,26 +14475,6 @@
 
 		(pts
 
-			(xy 332.54 198.26) (xy 332.54 203.34)
-
-		)
-
-		(stroke
-
-			(width 0)
-
-			(type solid)
-
-		)
-
-		(uuid "5737f503-4731-4a0d-9135-fe020f4bbdbe")
-
-	)
-
-	(wire
-
-		(pts
-
 			(xy 335.08 198.26) (xy 335.08 205.88)
 
 		)
@@ -14507,7 +14543,7 @@
 	)
 
 	(symbol
-		(lib_id "power:GNDA")
+		(lib_id "power:DGND")
 		(at 332.54 203.34 0)
 		(unit 1)
 		(body_style 1)
@@ -14517,13 +14553,13 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8a0a0130-56a9-4302-ae11-98b92a8d770b")
-		(property "Reference" "#PWR_MCU_BOTTOM_GNDA1" (at 335.08 199.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
-		(property "Value" "GNDA" (at 335.1 202.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left)))
+		(property "Reference" "#PWR_MCU_BOTTOM_DGND3" (at 335.08 199.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Value" "DGND" (at 335.1 202.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left)))
 		(property "Footprint" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 		(property "Description" "" (at 332.54 203.34 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 		(pin "1" (uuid "e21c59db-fa22-436c-b03e-0b9cac703da1"))
-		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_GNDA1") (unit 1))))
+		(instances (project "METERING_CORE" (path "/e4236fbb-ccab-4d10-bcea-7fda722d6751" (reference "#PWR_MCU_BOTTOM_DGND3") (unit 1))))
 	)
 
 	(symbol
@@ -14803,6 +14839,26 @@
 		)
 
 		(uuid "6f3f9a2d-54db-4cd6-b3f4-8015306dac63")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 36.83 125.73) (xy 36.83 123.19)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "8f720d99-5ded-47e8-9350-8792a6af1a77")
 
 	)
 
@@ -15692,6 +15748,26 @@
 
 		(pts
 
+			(xy 36.83 135.89) (xy 36.83 133.35)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "870d2584-58dc-45a9-a049-14359eec2447")
+
+	)
+
+	(wire
+
+		(pts
+
 			(xy 41.91 105.41) (xy 36.83 105.41)
 
 		)
@@ -15885,6 +15961,26 @@
 		)
 
 		(uuid "f5240b81-78ec-464a-ae5c-7ecf6a17c449")
+
+	)
+
+	(wire
+
+		(pts
+
+			(xy 145 267.97) (xy 145 265.43)
+
+		)
+
+		(stroke
+
+			(width 0)
+
+			(type solid)
+
+		)
+
+		(uuid "cc2217d2-c590-41c9-9592-0da4303346db")
 
 	)
 
@@ -17350,7 +17446,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 156.5 113.03 0)
+		(at 156.5 110.49 0)
 
 		(unit 1)
 
@@ -17370,7 +17466,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_006"
 
-			(at 159.04 109.22 0)
+			(at 159.04 106.68 0)
 
 			(hide yes)
 
@@ -17384,7 +17480,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 152.5 110.5 0)
+			(at 158.2 108.2 0)
 
 			(show_name no)
 
@@ -17396,7 +17492,7 @@
 
 		(property "Footprint" ""
 
-			(at 156.5 113.03 0)
+			(at 156.5 110.49 0)
 
 			(show_name no)
 
@@ -17408,7 +17504,7 @@
 
 		(property "Datasheet" ""
 
-			(at 156.5 113.03 0)
+			(at 156.5 110.49 0)
 
 			(show_name no)
 
@@ -17420,7 +17516,7 @@
 
 		(property "Description" ""
 
-			(at 156.5 113.03 0)
+			(at 156.5 110.49 0)
 
 			(show_name no)
 
@@ -17538,7 +17634,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 36.83 135.89 0)
+		(at 36.83 133.35 0)
 
 		(unit 1)
 
@@ -17558,7 +17654,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_007"
 
-			(at 39.37 132.08 0)
+			(at 39.37 129.54 0)
 
 			(hide yes)
 
@@ -17572,19 +17668,19 @@
 
 		(property "Value" "+3.3V"
 
-			(at 34.2 132.6 0)
+			(at 30.0 132.2 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1.27 1.27)) (justify right))
+			(effects (font (size 1.0 1.0)) (justify right))
 
 		)
 
 		(property "Footprint" ""
 
-			(at 36.83 135.89 0)
+			(at 36.83 133.35 0)
 
 			(show_name no)
 
@@ -17596,7 +17692,7 @@
 
 		(property "Datasheet" ""
 
-			(at 36.83 135.89 0)
+			(at 36.83 133.35 0)
 
 			(show_name no)
 
@@ -17608,7 +17704,7 @@
 
 		(property "Description" ""
 
-			(at 36.83 135.89 0)
+			(at 36.83 133.35 0)
 
 			(show_name no)
 
@@ -17682,7 +17778,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 36.83 125.73 0)
+		(at 36.83 123.19 0)
 
 		(unit 1)
 
@@ -17702,7 +17798,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_008"
 
-			(at 39.37 121.92 0)
+			(at 39.37 119.38 0)
 
 			(hide yes)
 
@@ -17716,19 +17812,19 @@
 
 		(property "Value" "+3.3V"
 
-			(at 34.2 122.44 0)
+			(at 30.0 122.0 0)
 
 			(show_name no)
 
 			(do_not_autoplace no)
 
-			(effects (font (size 1.27 1.27)) (justify right))
+			(effects (font (size 1.0 1.0)) (justify right))
 
 		)
 
 		(property "Footprint" ""
 
-			(at 36.83 125.73 0)
+			(at 36.83 123.19 0)
 
 			(show_name no)
 
@@ -17740,7 +17836,7 @@
 
 		(property "Datasheet" ""
 
-			(at 36.83 125.73 0)
+			(at 36.83 123.19 0)
 
 			(show_name no)
 
@@ -17752,7 +17848,7 @@
 
 		(property "Description" ""
 
-			(at 36.83 125.73 0)
+			(at 36.83 123.19 0)
 
 			(show_name no)
 
@@ -18266,7 +18362,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 145 267.97 0)
+		(at 145 265.43 0)
 
 		(unit 1)
 
@@ -18286,7 +18382,7 @@
 
 		(property "Reference" "#PWR_AUTO_33V_010"
 
-			(at 147.54 264.16 0)
+			(at 147.54 261.62 0)
 
 			(hide yes)
 
@@ -18300,7 +18396,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 146.5 263.8 0)
+			(at 147.54 263.4 0)
 
 			(show_name no)
 
@@ -18312,7 +18408,7 @@
 
 		(property "Footprint" ""
 
-			(at 145 267.97 0)
+			(at 145 265.43 0)
 
 			(show_name no)
 
@@ -18324,7 +18420,7 @@
 
 		(property "Datasheet" ""
 
-			(at 145 267.97 0)
+			(at 145 265.43 0)
 
 			(show_name no)
 
@@ -18336,7 +18432,7 @@
 
 		(property "Description" ""
 
-			(at 145 267.97 0)
+			(at 145 265.43 0)
 
 			(show_name no)
 
@@ -22390,7 +22486,7 @@
 
 		(property "Reference" "R_ZCT_BURDEN"
 
-			(at 36.04 175.14 0)
+			(at 41.12 166.80 0)
 
 			(show_name no)
 
@@ -22404,7 +22500,6 @@
 
 				)
 
-				(justify right)
 
 			)
 
@@ -22412,7 +22507,7 @@
 
 		(property "Value" "Burden"
 
-			(at 36.04 180.22 0)
+			(at 41.12 190.50 0)
 
 			(show_name no)
 
@@ -22426,7 +22521,6 @@
 
 				)
 
-				(justify right)
 
 			)
 
@@ -29470,7 +29564,7 @@
 
 		(lib_id "power:+3.3V")
 
-		(at 285 220 0)
+		(at 285 217.46 0)
 
 		(unit 1)
 
@@ -29490,7 +29584,7 @@
 
 		(property "Reference" "#PWR_MCU33"
 
-			(at 287.54 216.19 0)
+			(at 287.54 213.65 0)
 
 			(hide yes)
 
@@ -29512,7 +29606,7 @@
 
 		(property "Value" "+3.3V"
 
-			(at 287.54 220.51 0)
+			(at 287.54 215.90 0)
 
 			(show_name no)
 
@@ -29534,7 +29628,7 @@
 
 		(property "Footprint" ""
 
-			(at 285 220 0)
+			(at 285 217.46 0)
 
 			(show_name no)
 
@@ -29554,7 +29648,7 @@
 
 		(property "Datasheet" ""
 
-			(at 285 220 0)
+			(at 285 217.46 0)
 
 			(show_name no)
 
@@ -29574,7 +29668,7 @@
 
 		(property "Description" ""
 
-			(at 285 220 0)
+			(at 285 217.46 0)
 
 			(show_name no)
 

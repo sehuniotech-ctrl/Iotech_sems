@@ -1,4 +1,4 @@
-ERC report (2026-05-18T15:10:13, Encoding UTF8)
+ERC report (2026-05-18T16:04:03, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -70,7 +70,7 @@ Report includes: Errors, Warnings
     @(36.83 mm, 105.41 mm): Label 'RESV_LOW'
 [lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
     ; warning
-    @(36.83 mm, 125.73 mm): Symbol #PWR_AUTO_33V_008 [+3.3V]
+    @(36.83 mm, 123.19 mm): Symbol #PWR_AUTO_33V_008 [+3.3V]
 [lib_symbol_issues]: 현재 설정에 심볼 라이브러리 'SmartLoad'가 포함되어 있지 않음
     ; warning
     @(72.39 mm, 113.03 mm): Symbol U2 [ATM90E26-YU]
@@ -79,7 +79,7 @@ Report includes: Errors, Warnings
     @(107.95 mm, 80.01 mm): Label 'ATM90_MMD0'
 [lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
     ; warning
-    @(36.83 mm, 135.89 mm): Symbol #PWR_AUTO_33V_007 [+3.3V]
+    @(36.83 mm, 133.35 mm): Symbol #PWR_AUTO_33V_007 [+3.3V]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(36.83 mm, 146.05 mm): Label 'ATM90_MMD1'
@@ -160,16 +160,19 @@ Report includes: Errors, Warnings
     @(71.12 mm, 177.80 mm): Symbol #PWR_C_ZCT_N [GNDA]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
+    @(156.50 mm, 110.49 mm): Symbol #PWR_AUTO_33V_006 Hidden pin 1 [+3.3V, Power input, Line]
+[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
+    ; warning
+    @(156.50 mm, 110.49 mm): Symbol #PWR_AUTO_33V_006 [+3.3V]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
     @(50.41 mm, 185.18 mm): Symbol R_ZCT_P Pin 1 [Passive, Line]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(167.64 mm, 113.03 mm): Horizontal Wire, length 11.14 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(156.50 mm, 113.03 mm): Symbol #PWR_AUTO_33V_006 Hidden pin 1 [+3.3V, Power input, Line]
-[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
-    ; warning
-    @(156.50 mm, 113.03 mm): Symbol #PWR_AUTO_33V_006 [+3.3V]
+    @(156.50 mm, 113.03 mm): Vertical Wire, length 2.54 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(190.00 mm, 35.56 mm): Horizontal Wire, length 14.52 mm
@@ -616,6 +619,12 @@ Report includes: Errors, Warnings
     @(129.54 mm, 271.78 mm): Symbol C_PWR_OUT2 [C]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
+    @(145.00 mm, 265.43 mm): Symbol #PWR_AUTO_33V_010 Hidden pin 1 [+3.3V, Power input, Line]
+[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
+    ; warning
+    @(145.00 mm, 265.43 mm): Symbol #PWR_AUTO_33V_010 [+3.3V]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
     @(170.00 mm, 250.40 mm): Horizontal Wire, length 20.00 mm
 [footprint_link_issues]: 현재 구성에 풋프린트 라이브러리 'SmartLoad'이(가) 포함되어 있지 않습니다
     ; warning
@@ -628,13 +637,10 @@ Report includes: Errors, Warnings
     @(129.54 mm, 275.59 mm): Symbol #PWR_PS_OUT_G2 [DGND]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(145.00 mm, 267.97 mm): Symbol #PWR_AUTO_33V_010 Hidden pin 1 [+3.3V, Power input, Line]
+    @(145.00 mm, 267.97 mm): Vertical Wire, length 2.54 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(102.87 mm, 267.97 mm): Horizontal Wire, length 42.13 mm
-[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
-    ; warning
-    @(145.00 mm, 267.97 mm): Symbol #PWR_AUTO_33V_010 [+3.3V]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(170.00 mm, 255.48 mm): Horizontal Wire, length 20.00 mm
@@ -757,16 +763,19 @@ Report includes: Errors, Warnings
     @(245.00 mm, 256.19 mm): Vertical Wire, length 3.81 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
+    @(285.00 mm, 217.46 mm): Symbol #PWR_MCU33 Hidden pin 1 [+3.3V, Power input, Line]
+[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
+    ; warning
+    @(285.00 mm, 217.46 mm): Symbol #PWR_MCU33 [+3.3V]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
     @(349.68 mm, 82.62 mm): Symbol U_PLC Pin 20 [SPI_INTR/SERIAL_IO0, Passive, Line]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(285.00 mm, 220.00 mm): Symbol #PWR_MCU33 Hidden pin 1 [+3.3V, Power input, Line]
+    @(285.00 mm, 220.00 mm): Horizontal Wire, length 70.96 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(285.00 mm, 220.00 mm): Horizontal Wire, length 70.96 mm
-[lib_symbol_mismatch]: 심볼 '+3.3V'가 라이브러리 'power'의 복사본과 일치하지 않음
-    ; warning
-    @(285.00 mm, 220.00 mm): Symbol #PWR_MCU33 [+3.3V]
+    @(285.00 mm, 220.00 mm): Vertical Wire, length 2.54 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(360.00 mm, 33.65 mm): Horizontal Wire, length 19.84 mm
@@ -916,10 +925,10 @@ Report includes: Errors, Warnings
     @(347.78 mm, 175.40 mm): Horizontal Wire, length 8.89 mm
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
-    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_GNDA1 Hidden pin 1 [GNDA, Power input, Line]
-[lib_symbol_mismatch]: 심볼 'GNDA'가 라이브러리 'power'의 복사본과 일치하지 않음
+    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_DGND3 Hidden pin 1 [DGND, Power input, Line]
+[lib_symbol_issues]: 심볼 DGND를 라이브러리 'power'에서 찾을 수 없음
     ; warning
-    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_GNDA1 [GNDA]
+    @(332.54 mm, 203.34 mm): Symbol #PWR_MCU_BOTTOM_DGND3 [DGND]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(347.78 mm, 177.94 mm): Horizontal Wire, length 6.35 mm
@@ -1008,7 +1017,7 @@ Report includes: Errors, Warnings
     ; warning
     @(355.96 mm, 227.62 mm): Symbol #PWR_MCU_G5 [DGND]
 
- ** ERC messages: 335  Errors 0  Warnings 335
+ ** ERC messages: 338  Errors 0  Warnings 338
 
  ** Ignored checks:
     - Global label only appears once in the schematic
